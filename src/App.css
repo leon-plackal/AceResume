@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --clr-blue: #0edead;
+  --clr-blue-mid: #1170CD;
+  --clr-blue-dark: #1A1C6A;
+  --clr-white: #011a2e;
+  --clr-bright: #EFF2F9;
+  --clr-dark: rgb(66, 66, 66);
+  --clr-black: #000;
+  --clr-grey: #656e83;
+  --clr-green: #ced2db;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-manrope: 'Nunito', sans-serif;
+  --transition: all 300ms ease-in-out;
+}
+p{
+  font-size: 1rem;
+}
+button{
+  padding: 1rem 2rem;
+  background-color: #347ec7;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+} 
+body{
+  font-size: 1.6rem;
+  font-family: var(--font-poppins);
+  background-color: #f5f5f5;
+}
+/* Template Select */
+.templates-container{
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 24px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 50%;
+  margin-bottom: 4rem;
+}
+.title-message button{
+  padding: 1rem 2rem;
+  background-color: #347ec7;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+} 
+
+/* home */
+.home-container{
+  margin: 2rem auto;
+  display: flex;
+  max-width: 60%;
+  justify-content: left ;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 1rem;
+}
+.div-features-list{
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 5%;
+}
+.features-list li {
+  display: inline;
+  margin-right: 1rem;
+}
+ul.features-list {
+  padding-left: 0rem;
+}
+#home-features{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* build nav */
+.build-nav{
+  width: 100%;
+  background-color: #011a2e;
+  height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem 0 3rem;
+  justify-content: space-between;
+}
+.nav-left{
+  float: left;
+}
+.nav-right{
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 0;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+.nav-right button{
+  padding: 0.5rem;
+}
+
+
+.all-templates{
+  text-decoration: underline;
+}
+
+.no-text-decoration{
+  text-decoration: none;
+  
+}
+.list-item{
+  padding:10px;
+  font-size: 20px;
+}
+.modal{
+  display: none;
+}
+
+.block{
+  display: block;
+  background-color: rgba(50,50,50,0.5);
+}
+.resume{
+  margin:20px;
+  margin-left: 50px;
+}
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 50px 20px;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar li {
+  display: block;
+  border: 1px solid #4f81c7;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Links on mouse-over */
+.sidebar li:hover{
+  background-color:white;
+  ;
+}
+
+/* Page content.  */
+div.content {
+  padding: 1px 16px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:0;
+    padding: 1px;
+    /* display: none; */
+    /* height:80px; */
+  }
+
+  .sidebar li {
+    float: left;
+    font-size: 20px;
+  }
+  div.content {margin-left: 0;
+              margin-top: 30px;
+              background-color: #f7f7f7;}
+  .resume{margin: 1px;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar li {
+    text-align: center;
+    float: none;
+    font-size: 12px;
+  }
+}
+
+.input-style:focus{
+  border:5px solid rgba(63, 136, 239, 0.4);
+  outline:none;
+}
+
+.input-style{
+  width:100%;
+  border:1px solid rgb(207, 207, 207);
+  padding:6px;
+  border-radius:8px;
+}
+
+.image-aspect-ratio{
+aspect-ratio: 0.9;
+}
