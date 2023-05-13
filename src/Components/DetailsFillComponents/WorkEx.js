@@ -70,18 +70,18 @@ function WorkEx(props) {
     }
     let year =yearRange(2000,2023)
   return (
-    <div className='p-5' style={{textAlign:"left"}}>
-        <h2 >Work Experience</h2>
+    <div style={{padding:"4rem", textAlign:"left",}}>
+        <h2>Work Experience</h2>
         
         {workHeads.map((workHeading,index)=>{
             return(
                 <div key={index}>
-                    <div className="container p-2 font" style={{textAlign:"left"}}>
+                    <div >
                         <h5>Experience {index+1}</h5>
                         <hr/>
                         <div className="input-row-cont">
                             <div className="input-container">                                
-                                    <label className="col-sm-12 col-12" htmlFor="title" >Job Title*
+                                    <label className="label" htmlFor="title" >Job Title*
                                         <TextField  
                                             type="text" elementId="title" placeholder='Enter Job Title' 
                                             value={workHeading.title}
@@ -101,7 +101,7 @@ function WorkEx(props) {
                                     </label>
                             </div>
                             <div className="input-container">  
-                                    <label className="col-sm-12 col-12" htmlFor="name" >Organization Name*
+                                    <label className="label" htmlFor="name" >Organization Name*
                                         <TextField   type="text" elementId="name"  placeholder= 'Enter Organization Name'
                                             value={workHeading.orgName}
                                             onChange={(value,errorMessage)=>{onChangeHandler('orgName',value,index,errorMessage)}}
@@ -114,7 +114,7 @@ function WorkEx(props) {
                         </div>
                         <div className="input-row-cont">
                             <div className="input-container"> 
-                                <label htmlFor="start"className="col-sm-12 col-12 label" >Start year
+                                <label htmlFor="start"className="label" >Start year
                                         <select id="start" className="form-control" value={workHeading.startYear}
                                          onChange={(e)=>{
                                             dispatch(updateWorkEx({
@@ -135,7 +135,7 @@ function WorkEx(props) {
                                 </label>
                             </div>
                             <div className="input-container"> 
-                                <label htmlFor="end"className="col-sm-12 col-12  label" >End year
+                                <label htmlFor="end"className="label" >End year
                                         <select id="end" className="form-control" value={workHeading.endYear}
                                          onChange={(e)=>{
                                             dispatch(updateWorkEx({
@@ -157,8 +157,8 @@ function WorkEx(props) {
                             </div>
                         </div>
                         <div className="form-group input-row-cont">
-                            <div className="col-lg-12 col-12 pt-5 px-4"> 
-                                <label htmlFor="Textarea" className="col-sm-12 col-12 label">Job-description
+                            <div className=""> 
+                                <label htmlFor="Textarea" className="label">Job-description
                                     <TextArea  elementId="Textarea" rows="3" value={workHeading.jobDescription}
                                         onChange={(value)=>{onChangeHandler('jobDescription',value,index)}}
                                     />
@@ -172,13 +172,13 @@ function WorkEx(props) {
         })}
         <div className='d-flex'>
             <button 
-                className='btn btn-primary mt-3 me-5 mb-3 ml-1 p-2'
+                className='mt-3 me-5 mb-3 ml-1 p-2'
                 onClick={AddExperience}
             >
                 Add new
             </button>
             <button 
-                className='btn btn-primary mt-3 ms-5 mb-3 ml-1 p-2'
+                className='mt-3 ms-5 mb-3 ml-1 p-2'
                 onClick={RemoveExperience}
             >
                 Remove

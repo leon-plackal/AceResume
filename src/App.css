@@ -40,8 +40,9 @@ body{
   width:100%;
   border:none;
   background-color: #d6dbe4;
-  padding:6px;
+  padding:8px;
   border-radius:3px;
+  font-size: 16px;
 }
 .input-row-cont{
   margin-bottom: 2rem;
@@ -79,9 +80,9 @@ body{
   color: chocolate;
 }
 #divToPrint{
-  height: 21cm;
-  width: 29.7cm;
-  transform: scale(0.5);
+  background-color: #ffffff;
+  position: relative;
+  transform: scale(0.6);
 }
 /* Template Select */
 .templates-container{
@@ -190,7 +191,7 @@ ul.features-list {
   padding: 2rem;
   position: fixed;
   width: 50%;
-  top: 0px;
+  top: 80px;
   bottom: 0px;
   right: 0px;
   display: flex;
@@ -297,4 +298,15 @@ div.content {
 
 .image-aspect-ratio{
 aspect-ratio: 0.9;
+}
+
+/* templates */
+.template-global{
+  height: 29.7cm;
+  width: 21cm;
+}
+.template-g-bg{
+  height: 100%;
+  background-color: #ffffff;
+  padding: 2rem;
 }

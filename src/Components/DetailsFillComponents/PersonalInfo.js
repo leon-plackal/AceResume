@@ -27,7 +27,8 @@ function PersonalInfo(props) {
   }
   return (
     <div style={{padding:"4rem", textAlign:"left",}}>
-      <h1>Personal Details</h1>
+      <h2>Personal Details</h2>
+      <hr/>
         <div>
           <div>
             {/* ProfilePicUploadComponent is to show the selected profileImage in the resume uploaded by the user*/}
@@ -37,7 +38,7 @@ function PersonalInfo(props) {
               <div className="input-container">
                 <div className='row '>
                   <div className=''>
-                    <label htmlFor="firstname" className="label ">First Name*</label>
+                    <label htmlFor="firstname" className="label">First Name*</label>
                   </div>
                   <div className=''>
                       {/* TextField basically serves the purpose of validating the details filled by the user by calling updateErrorMessages function and also updates the value of targeted key by using onChange function */}

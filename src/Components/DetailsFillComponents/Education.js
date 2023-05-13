@@ -67,15 +67,15 @@ function Education(props) {
     }
     let year =yearRange(2000,2023)
   return (
-    <div className="container p-4 font" style={{textAlign:"left"}}>
-        <h1>Education details</h1>
+    <div style={{padding:"4rem", textAlign:"left",}}>
+        <h2>Education details</h2>
         <hr/>
         {educationHeads.map((educationHeading,index)=>{
             return(
                 <div key={index}>
                     <div className="input-row-cont">
                         <div className="input-container"> 
-                            <label className='col-md-12 col-12' htmlFor="type">Type
+                            <label className='label' htmlFor="type">Type</label>
                                 <select id="type" className="form-control" value={educationHeading.Type}
                                         onChange={(e)=>{
                                             dispatch(updateEducation({
@@ -88,12 +88,12 @@ function Education(props) {
                                     <option value='Graduation'> Graduation</option>
                                     <option value='Post Graduation'> Post Graduation</option>
                                 </select>
-                            </label>
+                            
                         </div>
                     </div>
                     <div className="input-row-cont">
                         <div className="input-container"> 
-                            <label  className="col-md-12 col-12" htmlFor="University">University*
+                            <label  className="label" htmlFor="University">University*</label>
                                 <TextField   type="text" elementId="University" placeholder='University'value={educationHeading.University}
                                         onChange={
                                             // this onChange will be called by TextField component as props.onChange when the user gives input to the targeted field and,
@@ -108,22 +108,22 @@ function Education(props) {
                                             required:true
                                         }}
                                 />
-                            </label>
+                            
                         </div>
                         <div className="input-container"> 
-                            <label  className="col-md-12 col-12" htmlFor="degree">Degree*
+                            <label  className="label" htmlFor="degree">Degree*</label>
                                 <TextField  type="text" elementId="Degree" placeholder='Degree'value={educationHeading.Degree}
                                         onChange={(value,errorMessage)=>{onChangeHandler('Degree',value,index,errorMessage)}}
                                         validation={{
                                             required:true
                                         }}
                                 />
-                            </label>
+                            
                         </div>
                     </div>
                     <div className="input-row-cont">
                         <div className="input-container">
-                            <label htmlFor="Start" className="label">Start year
+                            <label htmlFor="Start" className="label">Start year</label>
                                     <select id="Start" className="form-control" value={educationHeading.Start}
                                             onChange={(e)=>{
                                                 dispatch(updateEducation({
@@ -143,10 +143,10 @@ function Education(props) {
                                             ) 
                                         })}
                                     </select>
-                            </label>
+                            
                         </div>
                         <div className="input-container">
-                            <label htmlFor="end" className="col-md-12 col-12 label"> End year
+                            <label htmlFor="end" className="label"> End year</label>
                                     <select id="end" className="form-control" value={educationHeading.End}
                                             onChange={(e)=>{
                                                 dispatch(updateEducation({
@@ -167,7 +167,7 @@ function Education(props) {
                                             ) 
                                         })}
                                     </select>
-                            </label>
+                            
                         </div>
                     </div>
                 </div>
@@ -176,13 +176,13 @@ function Education(props) {
         })}
         <div className='d-flex'>
                 <button 
-                    className='btn btn-primary mt-3 me-5 mb-3 ml-1 p-2'
+                    className='mt-3 me-5 mb-3 ml-1 p-2'
                     onClick={AddEducation}
                 >
                     Add new
                 </button>
                 <button 
-                    className='btn btn-primary mt-3 ms-5 mb-3 ml-1 p-2'
+                    className='mt-3 ms-5 mb-3 ml-1 p-2'
                     onClick={RemoveEducation}
                 >
                     Remove

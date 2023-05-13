@@ -18,5 +18,5 @@ export const templateImagesPaths =[
     }
 ]
 
-export const stateNames =['Western Australia', 'Victoria', 'Queensland', 'New South Wales', 'Tasmania', 'Northern Territory', 'ACT','South Australia'
+export const stateNames =['Western Australia', 'Victoria', 'Queensland', 'NSW', 'Tasmania', 'Northern Territory', 'ACT','South Australia'
 ]

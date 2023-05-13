@@ -50,14 +50,14 @@ function KeySkills(props) {
         })}
         <div className='row mt-3 '>
           <div className='col-sm-2 col-12 mt-3'>
-            <button className='btn btn-primary p-2'
+            <button className='p-2'
                       onClick={AddSkill}>
                   Add-Skill
 
               </button>
           </div>
           <div className='col-sm-2 col-12 mt-3'>
-            <button className='btn btn-primary p-2'
+            <button className='p-2'
                       onClick={RemoveSkill}>
                   Remove
 

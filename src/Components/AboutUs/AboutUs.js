@@ -53,7 +53,7 @@ function AboutUs() {
                                         <img className="w-100 image-aspect-ratio" src={currentTemplate.imageSource} alt='template'/>
                                         {isMouseOver === currentTemplate.name           //this conditional rendering is showing 'useTemplate' button when isMouseOver === currentTemplate.name //
                                             ?<Link to="/detailsfillingpage/personalinfo">
-                                                <button className='btn btn-primary'
+                                                <button className=''
                                                         style={{position: 'absolute',top:'50%' , right:'30%',}}
                                                         onClick= {()=>{
                                                             dispatch(updateState({  //this dispatch function is used to update value of 'selectedTemplate' with the targetedTemplate in dataStoreSlice.js//

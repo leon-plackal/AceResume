@@ -49,7 +49,7 @@ function MyResume() {
         <div  className=' row mt-2 p-5'>
             <div className='w-100 d-flex justify-content-center'>
                 <Link to="/detailsfillingpage/keyskills">
-                    <button className='btn btn-primary me-4 p-2'> Go-Back</button>
+                    <button className='me-4 p-2'> Go-Back</button>
                 </Link>
                 <button className='btn btn-success ms-3 p-2'onClick={downloadComponentPDF}>
                     Save Resume
@@ -58,8 +58,8 @@ function MyResume() {
         </div>
         <div  className='  mt-2 p-5 w-100 ' style={{ minWidth:"1200px", overflow:'scroll'}}>
             <div className=' w-100  d-flex justify-content-center '>
-                <div className='w-100 ' >
-                    <div id='divToPrint' className='w-100' style={{ transform: 'scale(1)'}} >
+                
+                    <div id='divToPrint' style={{ transform: 'scale(1)'}} >
                         {/* In this div, user selected template is rendered alongwith the details filled by the user. */}
                         {selectedTemplate===""
                         ?<div><h1>Please select a template!</h1></div>
@@ -71,7 +71,7 @@ function MyResume() {
                         ?<Template3  />
                         :<Template4  />}
                     </div>
-                </div>
+                
 
             </div>
            

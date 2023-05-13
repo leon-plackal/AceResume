@@ -148,26 +148,10 @@ function DetailsFillingPage(props) {
 
         <div className="details-container" style={{ maxWidth: "1920px", marginTop: "12px", backgroundColor: "#fafafa", }}>
 
-         
-
-           
-
-
-            <div id='details-form-cont' className="col-lg-9 col-sm-12 col-12" style={{ border: "solid grey 2px" }}>
-              {/* <Routes>
-                                    <Route exact path="/personalinfo" 
-                                          element={<PersonalInfo isFormValid={isFormValid} />}>
-                                    </Route>
-                                     <Route exact path="/workex" 
-                                          element={<WorkEx isFormValid={isFormValid}/>}>
-                                    </Route>
-                                    <Route exact path="/education" 
-                                          element={<Education isFormValid={isFormValid}/>}>
-                                    </Route>
-                                    <Route exact path="/keyskills" 
-                                          element={<KeySkills isFormValid={isFormValid}/>}>
-                                    </Route>
-                          </Routes> */}
+            <div id='details-form-cont' >
+            <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
               <PersonalInfo></PersonalInfo>
               <Education></Education>
               <WorkEx></WorkEx>
