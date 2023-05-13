@@ -4,7 +4,6 @@ import ProfilePicUploadComponent from './ProfileUpload'
 import {stateNames} from '../Data/Data'
 import TextField from '../InputComponents/TextField'
 import TextArea from '../InputComponents/TextArea'
-import BottomNavigation from './BottomNavigation'
 import { updatePersonalInfo, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
 
 //this component renders Personal Info page inside the details filling page.
@@ -27,19 +26,20 @@ function PersonalInfo(props) {
     }
   }
   return (
-    <div style={{padding:"15px", textAlign:"left",}}>
+    <div style={{padding:"4rem", textAlign:"left",}}>
+      <h1>Personal Details</h1>
         <div>
           <div>
             {/* ProfilePicUploadComponent is to show the selected profileImage in the resume uploaded by the user*/}
             <ProfilePicUploadComponent/>
           </div>
-          <div className="row font" >
-              <div className="col-lg-6 col-12 pt-5 px-4">
+          <div className="input-row-cont" >
+              <div className="input-container">
                 <div className='row '>
-                  <div className='col-sm-2  col-12'>
-                    <label htmlFor="firstname" className="col-form-label ">First Name*</label>
+                  <div className=''>
+                    <label htmlFor="firstname" className="label ">First Name*</label>
                   </div>
-                  <div className='col-sm-10 col-12'>
+                  <div className=''>
                       {/* TextField basically serves the purpose of validating the details filled by the user by calling updateErrorMessages function and also updates the value of targeted key by using onChange function */}
                       <TextField type="text" elementId="firstname"  placeholder="First name" 
                           value={personalHeads.firstName}
@@ -60,12 +60,12 @@ function PersonalInfo(props) {
                 </div>
               </div>
 
-              <div className="col-lg-6 col-12 pt-5  px-4">
+              <div className="input-container">
                   <div className='row'>
-                    <div className='col-sm-2 col-12'>
-                      <label htmlFor="lastname" className="col-form-label">Last Name</label>
+                    <div className=''>
+                      <label htmlFor="lastname" className="label">Last Name</label>
                     </div>
-                    <div className='col-sm-10 col-12'>
+                    <div className=''>
                       <TextField type="text" elementId="lastname"  placeholder="Last name" 
                             value={personalHeads.lastName}
                             onChange={(value)=>{onChangeHandler('lastName',value)}}
@@ -74,13 +74,13 @@ function PersonalInfo(props) {
                   </div>
               </div>
           </div>
-          <div className="row font" >
-              <div className="col-lg-6 col-12 pt-5 px-4">
+          <div className="input-row-cont" >
+              <div className="input-container">
                 <div className='row '>
-                  <div className='col-sm-2  col-12'>
-                      <label htmlFor="staticEmail" className="col-sm-1 col-form-label">Email*</label>
+                  <div className=''>
+                      <label htmlFor="staticEmail" className="label">Email*</label>
                   </div>
-                  <div className="col-sm-10  col-12">
+                  <div className="">
                       <TextField type="text"  elementId="staticEmail" placeholder='users@example.com' 
                             validation={
                               {checkType:'email' , required:true}
@@ -91,14 +91,12 @@ function PersonalInfo(props) {
                   </div>
                 </div>
               </div>
-          </div>
-          <div className="row font">
-              <div className="col-lg-6 col-12 pt-5 px-4">
+              <div className="input-container">
                 <div className='row '>
-                  <div className='col-sm-2  col-12'>
-                      <label htmlFor="mobile" className="col-sm-1 col-form-label">Mobile No.*</label>
+                  <div className=''>
+                      <label htmlFor="mobile" className="label">Mobile No.*</label>
                   </div>
-                  <div className="col-sm-10  col-12">
+                  <div className="">
                       <TextField type="number" elementId="Mobile" 
                             validation={
                               { 
@@ -114,13 +112,13 @@ function PersonalInfo(props) {
               </div>
           </div>
 
-          <div className="row font" >
-              <div className="col-lg-6 col-12 pt-5 px-4">
+          <div className="input-row-cont" >
+              <div className="input-container">
                 <div className='row '>
-                  <div className='col-sm-2  col-12'>
-                      <label htmlFor="inputAddress1" className="col-sm-1 col-form-label">Address1</label>
+                  <div className=''>
+                      <label htmlFor="inputAddress1" className="label">Address1</label>
                   </div>
-                  <div className='col-sm-10 col-12'>
+                  <div className=''>
                       <TextField type="text" elementId="inputAddress1" 
                             value={personalHeads.Address1}
                             onChange={(value)=>{ onChangeHandler('Address1',value) }}
@@ -128,12 +126,12 @@ function PersonalInfo(props) {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 col-12 pt-5  px-4">
+              <div className="input-container">
                 <div className='row'>
-                  <div className='col-sm-2 col-12'>
-                    <label htmlFor="inputAddress2" className="col-sm-1 col-form-label">Address2</label>
+                  <div className=''>
+                    <label htmlFor="inputAddress2" className="label">Address2</label>
                   </div>
-                  <div className='col-sm-10 col-12'>
+                  <div className=''>
                     <TextField type="text" elementId="inputAddress2" value={personalHeads.Address2}
                           onChange={(value)=>{ onChangeHandler('Address2',value) }}
                     />
@@ -142,16 +140,16 @@ function PersonalInfo(props) {
               </div>
           </div>
     
-          <div className="row font">
-              <div className="col-lg-6 col-12 pt-5 px-4">
+          <div className="input-row-cont">
+              <div className="input-container">
                 <div className='row '>
-                  <div className='col-sm-2  col-12'>
-                    <label htmlFor="inputCity" className="col-sm-1 col-form-label">City*</label>
+                  <div className=''>
+                    <label htmlFor="inputCity" className="label">City</label>
                   </div>
-                  <div className="col-sm-10 col-12">
+                  <div className="">
                     <TextField type="text"  elementId="inputCity" 
                           validation={
-                            { required:true,}
+                            { required:false,}
                           } 
                           value={personalHeads.City}
                           onChange={(value,errorMessage)=>{ onChangeHandler('City',value,errorMessage) }}
@@ -159,14 +157,12 @@ function PersonalInfo(props) {
                   </div>
                 </div>
               </div>
-          </div>
-          <div className="row font">
-              <div className="col-lg-6 col-12 pt-5 px-4">
+              <div className="input-container">
                 <div className='row '>
-                  <div className='col-sm-2  col-12'>
-                    <label htmlFor="inputState"className="col-sm-1 col-form-label" >State</label>
+                  <div className=''>
+                    <label htmlFor="inputState"className="label" >State</label>
                   </div>
-                  <div className='col-sm-10  col-12'>
+                  <div className=''>
                     <select id="inputState" className="form-control" value={personalHeads.State}
                             onChange={(e)=>{
                                 dispatch(updatePersonalInfo({
@@ -189,27 +185,14 @@ function PersonalInfo(props) {
                 </div>
               </div>
           </div>
-          <div className=" row font">
-              <div className="col-lg-6 col-12 pt-5 px-4">
+          
+          <div className=" input-row-cont">
+              <div className="">
                 <div className='row '>
-                  <div className='col-sm-2  col-12'>
-                    <label htmlFor="pin" className="col-sm-1 col-form-label">Pincode</label>
+                  <div className=''>
+                    <label htmlFor="Textarea" className="label">Objective</label>
                   </div>
-                  <div className='col-sm-10  col-12'>
-                    <TextField type="number" className="form-control" id="pin" value={personalHeads.Pin}
-                          onChange={(value)=>{ onChangeHandler('Pin',value) }}
-                    />
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div className=" row font">
-              <div className="col-lg-12 col-12 pt-5 px-4">
-                <div className='row '>
-                  <div className='col-lg-1 col-sm-2 col-12'>
-                    <label htmlFor="Textarea" className="col-sm-1 col-form-label">Objective</label>
-                  </div>
-                  <div className='col-lg-11 col-sm-10 col-12'>
+                  <div className=''>
                     <TextArea elementId="Textarea" rows="3" value={personalHeads.Objective}
                               onChange={(value)=>{ onChangeHandler('Objective',value) }}
                     />
@@ -218,9 +201,6 @@ function PersonalInfo(props) {
               </div>
           </div>
         </div>
-          {/* this BottomNavigation component displays 'previous' and 'next' button below the details fill form and will redirect the user to the 'previous page Path' and the 'nextPagePath' respectively. */}
-        <BottomNavigation prevPagePath='/' nextPagePath='/detailsfillingpage/workex' isFormValid={props.isFormValid}/>
-        
     </div>
   )
 }

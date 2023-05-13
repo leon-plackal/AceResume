@@ -73,8 +73,8 @@ function Education(props) {
         {educationHeads.map((educationHeading,index)=>{
             return(
                 <div key={index}>
-                    <div className="row font">
-                        <div className="col-lg-6 col-12 pt-5 px-4"> 
+                    <div className="input-row-cont">
+                        <div className="input-container"> 
                             <label className='col-md-12 col-12' htmlFor="type">Type
                                 <select id="type" className="form-control" value={educationHeading.Type}
                                         onChange={(e)=>{
@@ -91,8 +91,8 @@ function Education(props) {
                             </label>
                         </div>
                     </div>
-                    <div className="row font">
-                        <div className="col-lg-6 col-12 pt-5 px-4"> 
+                    <div className="input-row-cont">
+                        <div className="input-container"> 
                             <label  className="col-md-12 col-12" htmlFor="University">University*
                                 <TextField   type="text" elementId="University" placeholder='University'value={educationHeading.University}
                                         onChange={
@@ -110,7 +110,7 @@ function Education(props) {
                                 />
                             </label>
                         </div>
-                        <div className="col-lg-6 col-12 pt-5 px-4"> 
+                        <div className="input-container"> 
                             <label  className="col-md-12 col-12" htmlFor="degree">Degree*
                                 <TextField  type="text" elementId="Degree" placeholder='Degree'value={educationHeading.Degree}
                                         onChange={(value,errorMessage)=>{onChangeHandler('Degree',value,index,errorMessage)}}
@@ -121,9 +121,9 @@ function Education(props) {
                             </label>
                         </div>
                     </div>
-                    <div className="row font">
-                        <div className="col-lg-6 col-12 pt-5 px-4">
-                            <label htmlFor="Start" className="col-md-12 col-12 col-form-label">Start year
+                    <div className="input-row-cont">
+                        <div className="input-container">
+                            <label htmlFor="Start" className="label">Start year
                                     <select id="Start" className="form-control" value={educationHeading.Start}
                                             onChange={(e)=>{
                                                 dispatch(updateEducation({
@@ -145,8 +145,8 @@ function Education(props) {
                                     </select>
                             </label>
                         </div>
-                        <div className="col-lg-6 col-12 pt-5 px-4">
-                            <label htmlFor="end" className="col-md-12 col-12 col-form-label"> End year
+                        <div className="input-container">
+                            <label htmlFor="end" className="col-md-12 col-12 label"> End year
                                     <select id="end" className="form-control" value={educationHeading.End}
                                             onChange={(e)=>{
                                                 dispatch(updateEducation({

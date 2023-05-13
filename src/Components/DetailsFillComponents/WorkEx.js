@@ -79,8 +79,8 @@ function WorkEx(props) {
                     <div className="container p-2 font" style={{textAlign:"left"}}>
                         <h5>Experience {index+1}</h5>
                         <hr/>
-                        <div className="row font">
-                            <div className="col-lg-6 col-12 pt-5 px-4">                                
+                        <div className="input-row-cont">
+                            <div className="input-container">                                
                                     <label className="col-sm-12 col-12" htmlFor="title" >Job Title*
                                         <TextField  
                                             type="text" elementId="title" placeholder='Enter Job Title' 
@@ -100,7 +100,7 @@ function WorkEx(props) {
                                         />
                                     </label>
                             </div>
-                            <div className="col-lg-6 col-12 pt-5 px-4">  
+                            <div className="input-container">  
                                     <label className="col-sm-12 col-12" htmlFor="name" >Organization Name*
                                         <TextField   type="text" elementId="name"  placeholder= 'Enter Organization Name'
                                             value={workHeading.orgName}
@@ -112,9 +112,9 @@ function WorkEx(props) {
                                     </label>
                             </div>
                         </div>
-                        <div className="row font">
-                            <div className="col-lg-6 col-12 pt-5 px-4"> 
-                                <label htmlFor="start"className="col-sm-12 col-12 col-form-label" >Start year
+                        <div className="input-row-cont">
+                            <div className="input-container"> 
+                                <label htmlFor="start"className="col-sm-12 col-12 label" >Start year
                                         <select id="start" className="form-control" value={workHeading.startYear}
                                          onChange={(e)=>{
                                             dispatch(updateWorkEx({
@@ -134,8 +134,8 @@ function WorkEx(props) {
                                         </select>
                                 </label>
                             </div>
-                            <div className="col-lg-6 col-12 pt-5 px-4"> 
-                                <label htmlFor="end"className="col-sm-12 col-12  col-form-label" >End year
+                            <div className="input-container"> 
+                                <label htmlFor="end"className="col-sm-12 col-12  label" >End year
                                         <select id="end" className="form-control" value={workHeading.endYear}
                                          onChange={(e)=>{
                                             dispatch(updateWorkEx({
@@ -156,9 +156,9 @@ function WorkEx(props) {
                                 </label>
                             </div>
                         </div>
-                        <div className="form-group row font">
+                        <div className="form-group input-row-cont">
                             <div className="col-lg-12 col-12 pt-5 px-4"> 
-                                <label htmlFor="Textarea" className="col-sm-12 col-12 col-form-label">Job-description
+                                <label htmlFor="Textarea" className="col-sm-12 col-12 label">Job-description
                                     <TextArea  elementId="Textarea" rows="3" value={workHeading.jobDescription}
                                         onChange={(value)=>{onChangeHandler('jobDescription',value,index)}}
                                     />

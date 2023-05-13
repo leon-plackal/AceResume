@@ -25,12 +25,12 @@ function App() {
         }
     }
     return (
-        <div className="container">
+        <div className="profile-picture">
     
             <div className="row">
-                <img style={{height:'150px', width:'100px', background:'grey',padding:0}} src={imageFile} alt='profile'/>
+                <img src={imageFile} alt='Image'/>
             </div>
-            <div className="row">
+            <div className="pfp-link">
                 <input type="file" onChange={handleChange} />
             </div>
             

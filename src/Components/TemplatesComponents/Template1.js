@@ -6,7 +6,7 @@ function Template1() {
     const dataStore = useSelector(state => state.dataStore)
 
   return (
-    <div className="mb-5 p-4 w-100" style={{border:"5px solid #00adb5", backgroundColor:"biege"}}>
+    <div className="mb-5 p-5 w-100" style={{border:"5px solid #00adb5", backgroundColor:"biege"}}>
         <div >
             <div className="row  m-0 d-flex align-items-center" style={{height:"200px"}}>
                 <div className="col-2 text-center media" >
