@@ -141,7 +141,8 @@ ul.features-list {
 
 /* build nav */
 .build-nav{
-  position: sticky;
+  position: fixed;
+  top: 0;
   z-index: 100;
   width: 100%;
   background-color: #011a2e;
@@ -170,11 +171,17 @@ ul.features-list {
 /* builder */
 .details-container{
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.required-error{
+  font-size: 16px;
 }
 #details-form-cont{
-  
+  width: 90%;
 }
 .build-container{
+  margin-top: 80px;
   width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -220,10 +227,14 @@ ul.features-list {
 }
 /* The side navigation menu */
 .sidebar {
+  position: fixed;
+  left: 0;
+  top: 40%;
   margin: 0;
-  padding: 50px 20px;
   height: 100%;
+  width: 50px;
   overflow: auto;
+  
 }
 
 /* Sidebar links */

@@ -8,6 +8,7 @@ import Template3 from '../TemplatesComponents/Template3'
 import Template4 from '../TemplatesComponents/Template4'
 import html2canvas from 'html2canvas'
 import SuccessMessage from './Modal'
+import { Translate } from 'react-bootstrap-icons'
 
 function MyResume() {
     //this component shows the preview of the resume created by the user with the 'Save'and 'Back' button//
@@ -58,7 +59,7 @@ function MyResume() {
         <div  className='  mt-2 p-5 w-100 ' style={{ minWidth:"1200px", overflow:'scroll'}}>
             <div className=' w-100  d-flex justify-content-center '>
                 <div className='w-100 ' >
-                    <div id='divToPrint' className='w-100'>
+                    <div id='divToPrint' className='w-100' style={{ transform: 'scale(1)'}} >
                         {/* In this div, user selected template is rendered alongwith the details filled by the user. */}
                         {selectedTemplate===""
                         ?<div><h1>Please select a template!</h1></div>

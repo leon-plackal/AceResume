@@ -64,7 +64,6 @@ function KeySkills(props) {
               </button>
           </div>
         </div>
-        <BottomNavigation prevPagePath='/detailsfillingpage/education' nextPagePath='/myresume' isFormValid={props.isFormValid}/>
       
     </div>
   )

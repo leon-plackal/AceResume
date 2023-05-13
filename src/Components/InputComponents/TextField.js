@@ -73,10 +73,10 @@ function TextField(props) {
     }, [value])
 
   return (
-    <div className='w-100 h-100 position-relative'>
+    <div className='position-relative'>
         {/* here value!=="" ensures that the errorMessages are not shown initially when the page is rendered,
         but shown when the showErrorMessages is set as true and that happens when the 'isFormValid' is false */}
-        <div  style={((value!=="" || showErrorMessages === true)  && errorMessage!=="")?{display:'block',position:'absolute', bottom:-20,color:"rgb(247, 89, 89)",}:{display:'none'}}>{errorMessage}</div>
+        <div  style={((value!=="" || showErrorMessages === true)  && errorMessage!=="")?{display:'block',fontSize:'14px', position:'absolute', bottom:-20,color:"rgb(247, 89, 89)",}:{display:'none'}}>{errorMessage}</div>
         <input
             className='input-style'
             id={props.elementId}

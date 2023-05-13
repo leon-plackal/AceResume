@@ -188,7 +188,6 @@ function Education(props) {
                     Remove
                 </button>
             </div>
-            <BottomNavigation prevPagePath='/detailsfillingpage/workex' nextPagePath='/detailsfillingpage/keyskills' isFormValid={props.isFormValid}/>
     </div>
   )
 }

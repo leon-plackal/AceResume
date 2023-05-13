@@ -12,7 +12,7 @@ function Template3() {
                     <img className="rounded align-self-center  " src={ dataStore.imageFile} alt='profile-pic'
                         style={{maxHeight:'180px',minHeight:"100px", width:'100px', background:'grey',padding:0}}/>
                 </div>
-                <div className=" mt-3 font-weight-bold " style={{fontFamily:"Serif",}}>
+                <div className=" mt-3 font-weight-bold " style={{fontFamily:"Poppins",}}>
                     <div className='' style={{color:"white",fontSize:"30px"}}>{ dataStore.personalInfo.firstName +" "+  dataStore.personalInfo.lastName}</div>
                     <h5 className='pt-2 'style={{color:"#adccc7", fontSize:"20px"}}>{dataStore.workEx[dataStore.workEx.length -1].title}</h5>
                 </div>
@@ -34,7 +34,7 @@ function Template3() {
                     <div className="text-justify mt-4">{dataStore.personalInfo.Objective}</div>
                     <hr style={{height:"5px",backgroundColor:"#4b6982"}}/> 
                 </div>
-                <div className="" style={{fontFamily:"Serif",}}>
+                <div className="" style={{fontFamily:"Poppins",}}>
                     <div className="">
                     <div className=" text-left bg-light mb-4 " style={{color:"#4b6982"}}> <h3><b>Professional Experience</b> </h3></div>
                     <div className=" text-left " style={{fontSize:"18px"}}>

@@ -184,7 +184,6 @@ function WorkEx(props) {
                 Remove
             </button>
         </div>
-        <BottomNavigation prevPagePath='/detailsfillingpage/personalinfo' nextPagePath='/detailsfillingpage/education' isFormValid={props.isFormValid} />
     </div>
     
   )

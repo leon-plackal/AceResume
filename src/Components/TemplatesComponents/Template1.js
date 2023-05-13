@@ -14,7 +14,7 @@ function Template1() {
                          style={{maxHeight:'180px',minHeight:"120px", width:'100px', background:'grey',padding:0}}/>
                    
                 </div>
-                <div className="col-6    text-left font-weight-bold " style={{fontFamily:"Serif"}}>
+                <div className="col-6    text-left font-weight-bold " style={{fontFamily:"Poppins"}}>
                     <div className=' d-flex justify-content-center' style={{color:"#00adb5",fontSize:"55px"}}>{ dataStore.personalInfo.firstName +" "+  dataStore.personalInfo.lastName}</div>
                     <h5 className=' d-flex justify-content-center'>{dataStore.workEx[dataStore.workEx.length -1].title}</h5>
                 </div>
@@ -35,7 +35,7 @@ function Template1() {
         <div className="text-justify mx-4">{dataStore.personalInfo.Objective}</div>
         <hr style={{height:"5px",backgroundColor:"#00adb5"}}/>
 
-        <div className="container" style={{fontFamily:"Serif",}}>
+        <div className="container" style={{fontFamily:"Poppins",}}>
             <div className="row">
                 <div className="col-3 text-left  " style={{color:"#00adb5"}}> <h4> Professional Experience</h4></div>
                 <div className="col-9  text-left " style={{fontSize:"18px"}}>
