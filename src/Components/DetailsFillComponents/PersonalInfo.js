@@ -117,12 +117,12 @@ function PersonalInfo(props) {
               <div className="input-container">
                 <div className='row '>
                   <div className=''>
-                      <label htmlFor="inputAddress1" className="label">Address1</label>
+                      <label htmlFor="inputRole" className="label">Role</label>
                   </div>
                   <div className=''>
-                      <TextField type="text" elementId="inputAddress1" 
-                            value={personalHeads.Address1}
-                            onChange={(value)=>{ onChangeHandler('Address1',value) }}
+                      <TextField type="text" elementId="inputRole" 
+                            value={personalHeads.Role}
+                            onChange={(value)=>{ onChangeHandler('Role',value) }}
                       />
                   </div>
                 </div>

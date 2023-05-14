@@ -83,7 +83,7 @@ function Template4() {
 
                 <div id='skills'>
                     <div className='d-flex justify-content-center'> 
-                        <h3 className='h4 mt-4'>Skills&Other</h3>
+                        <h3 className='h4 mt-4'>Skills</h3>
                     </div>
                     <hr style={{height:"1px",backgroundColor:"#4b6982"}}/>
                     <div className=" text-left d-flex flex-lg-row gap-2" style={{fontSize:"18px"}}>

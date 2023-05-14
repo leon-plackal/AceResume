@@ -76,7 +76,7 @@ const MenuBar = ({ editor }) => {
                     onClick={() => editor.chain().focus().setParagraph().run()}
                     className={editor.isActive('paragraph') ? 'is-active' : ''}
                 >
-                    paragraph
+                    Paragraph
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}

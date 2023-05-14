@@ -1,96 +1,94 @@
 import React from 'react'
+import parser from 'html-react-parser'
 import { useSelector } from 'react-redux'
+
 const shortid = require('shortid')
 
-function Template3() {
+function Template4() {
     const dataStore = useSelector(state => state.dataStore)
-  return (
-    <div className='w-100' style={{border:"1px solid #4b6982",backgroundColor:"#f7eebb"}}>
-        <div className='row m-0'>
-            <div className='col col-3 d-flex align-items-center pt-5' style={{backgroundColor:"#583131", flexDirection:"column"}}>
-                <div className=" media me-5" >
-                    <img className="rounded align-self-center  " src={ dataStore.imageFile} alt='profile-pic'
-                        style={{maxHeight:'180px',minHeight:"100px", width:'100px', background:'grey',padding:0}}/>
-                </div>
-                <div className=" mt-3 font-weight-bold " style={{fontFamily:"Poppins",}}>
-                    <div className='' style={{color:"white",fontSize:"30px"}}>{ dataStore.personalInfo.firstName +" "+  dataStore.personalInfo.lastName}</div>
-                    <h5 className='pt-2 'style={{color:"#adccc7", fontSize:"20px"}}>{dataStore.workEx[dataStore.workEx.length -1].title}</h5>
-                </div>
-                <div className=" ">
-                    <div className='p-5 ms-4' style={{fontSize:"18px",display:"inline-block"}}>
-                        <div className=" px-2 mb-2 " style={{backgroundColor:'white', color:"black"}}>Email:</div>
-                        <div style={{color:'#f7f7f7'}}>{dataStore.personalInfo.Email}</div>
-                        <div className=" px-2 mb-2 mt-2" style={{backgroundColor:'white', color:"black"}}>Contact:</div>
-                        <div style={{color:'#f7f7f7'}}>{dataStore.personalInfo.Mobile}</div>
-                        <div className=" px-2 mb-2 mt-2 " style={{backgroundColor:'white', color:"black"}}>Address:</div>
-                        <div style={{color:'#f7f7f7'}}>{dataStore.personalInfo.Address1 +", "+ dataStore.personalInfo.Address2
-                                +",  "+dataStore.personalInfo.City+", "+ dataStore.personalInfo.State +", "+ dataStore.personalInfo.Pin}
+    return (
+        <div className='template-global' style={{ fontFamily: 'Rubik', fontWeight: '400' }}>
+            <div className='template-g-bg d-grid g-2' style={{ background: 'linear-gradient(13deg, rgba(230,245,234,1) 0%, rgba(250,250,250,1) 62%, rgba(203,214,255,1) 100%)', padding:'2.5rem' }}>
+
+                <div className='right'>
+                    <div className='d-grid gap-3 mb-2' style={{ gridTemplateColumns: '20% 80%' }}>
+                        <h6>Details</h6>
+                        <div className='d-flex flex-row gap-3'>
+                            <div style={{ color: 'black', fontSize: '12px' }}>{dataStore.personalInfo.Mobile}</div>
+                            <div style={{ color: 'black', fontSize: '12px' }}>{dataStore.personalInfo.Email}</div>
+                        </div>
+
+                    </div>
+
+                    <div className='d-grid gap-3 mb-4' style={{ gridTemplateColumns: '20% 80%' }}>
+                        <div></div>
+                        <div>
+                            <div className='' style={{ color: "black", fontSize: "25px", fontWeight: '500' }}>{dataStore.personalInfo.firstName + " " + dataStore.personalInfo.lastName + ", " + dataStore.personalInfo.Role}</div>
+                            <div className="justify-content-left d-flex" style={{ textAlign: 'left', fontWeight: '500' }}>{parser(dataStore.personalInfo.Objective)}</div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className='col col-9'>
-                <div>
-                    <div className="text-justify mt-4">{dataStore.personalInfo.Objective}</div>
-                    <hr style={{height:"5px",backgroundColor:"#4b6982"}}/> 
-                </div>
-                <div className="" style={{fontFamily:"Poppins",}}>
-                    <div className="">
-                    <div className=" text-left bg-light mb-4 " style={{color:"#4b6982"}}> <h3><b>Professional Experience</b> </h3></div>
-                    <div className=" text-left " style={{fontSize:"18px"}}>
-                        {dataStore.workEx.map((item)=>{
-                            return(
-                                    <div key={shortid.generate()}>
-                                        <div className='mt-2'><h4>{item.orgName}</h4></div>
-                                        <div className='mt-2'><b>{item.title}</b></div>
-                                        
-                                        <div className='mt-2 mb-3'>
-                                            <div>Worked in {item.orgName} from {item.startYear} to {item.endYear}.</div>
-                                            <div>{item.jobDescription}</div>
+
+                    <div className='d-grid gap-3 mb-2' style={{ gridTemplateColumns: '20% 80%' }}>
+                        <h6>Employment</h6>
+                        <div className="text-left " style={{ fontSize: "18px" }}>
+                            {dataStore.workEx.map((item) => {
+                                return (
+                                    <div className='position-relative' key={shortid.generate()}>
+                                        <div className='' style={{ fontWeight: '500' }}>{item.title + " at " + item.orgName}</div>
+                                        <div className='m-0' style={{ fontSize: "12px", color: 'gray' }}>
+                                            <div className=''>{item.startYear} - {item.endYear}</div>
+                                        </div>
+                                        <div className=''>
+                                            <div className='tiptap-text-p' style={{ fontWeight: '400' }}>
+                                                {parser(item.jobDescription)}
+                                            </div>
                                         </div>
                                     </div>
                                 )
                             })
-                        }
-                    </div>
-                    <div className="w-100 mt-4"> </div>
-                    <hr style={{height:"5px",backgroundColor:"#4b6982"}}/>
-                    <div className="bg-light text-left" style={{color:"#4b6982"}}><h3><b>Education</b></h3></div>
-                    <div className=" text-left" >
-                        <div style={{fontSize:"18px"}}>
-                            {dataStore.education.map((item)=>{
-                                return(
-                                        <div key={shortid.generate()}>
-                                            <h5> {item.Degree}</h5>
-                                            <div> I have persued my {item.Type} <b> from {item.University}</b> </div>
-                                            <p>Duration: {" "+item.Start+ " - " + item.End}</p> 
-                                        </div>
-                                    )
-                                })
                             }
                         </div>
                     </div>
-                    <div className="w-100 mt-4"> </div>
-                    <hr style={{height:"5px",backgroundColor:"#4b6982"}}/>
-                    <div className="bg-light text-left " >
-                        <h3 style={{color:"#4b6982"}}><b>Key Skills</b></h3>
-                    </div>
-                    <div className=" text-left mb-4" style={{fontSize:"18px"}}>
-                            {dataStore.skills.map((skill)=>{
-                                return(
-                                        <div key={shortid.generate()}><li>{skill.skillName}</li></div>
-                                    )
-                                })
+
+                    <div className='d-grid gap-3 mb-4' style={{ gridTemplateColumns: '20% 80%' }}>
+                        <div><h6 >Education</h6></div>
+                        <div style={{ fontSize: "18px" }}>
+                            {dataStore.education.map((item) => {
+                                return (
+                                    <div className='position-relative' key={shortid.generate()}>
+                                        <div className='' style={{ fontWeight: '500' }}>{item.Degree + ' at ' + item.University}</div>
+                                        <div className='m-0' style={{ fontSize: "12px", color: 'gray' }}>{item.Start} - {item.End}</div>
+                                        <div className='' style={{ fontWeight: '400' }}>{parser(item.Type)}</div>
+                                    </div>
+                                )
+                            })
                             }
+                        </div>
                     </div>
+
+                    <div className='d-grid gap-3 mb-4' style={{ gridTemplateColumns: '20% 80%' }}>
+                    <div><h6>Skills</h6></div>
+                    <div className="text-left d-flex flex-lg-row gap-2" style={{fontWeight: '400',fontSize: "16px" }}>
+                        {dataStore.skills.map((skill) => {
+                            return (
+                                <div key={shortid.generate()}>{skill.skillName}</div>
+                            )
+                        })
+                        }
                     </div>
                 </div>
+
+                </div>
+
+
+
+                
+
+
             </div>
-           
+
         </div>
-      
-    </div>
-  )
+    )
 }
 
-export default Template3
+export default Template4

@@ -8,7 +8,7 @@ export const dataStoreSlice = createSlice({
                 lastName:"",
                 Email:"",
                 Mobile:"",
-                Address1:"",
+                Role:"",
                 Address2:"",
                 City:"",
                 State:"",
@@ -26,7 +26,7 @@ export const dataStoreSlice = createSlice({
         ],
         education:[
           {
-                Type:"Graduation",
+                Type:"",
                 University:"",
                 Degree:"",
                 Start:"",

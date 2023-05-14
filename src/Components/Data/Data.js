@@ -10,7 +10,7 @@ export const templateImagesPaths =[
     },
     {
         name:'Template 3',
-        imageSource:require('./images/temp3.jpg'),
+        imageSource:require('./images/template3.png'),
     },
     {
         name:'Template 4',

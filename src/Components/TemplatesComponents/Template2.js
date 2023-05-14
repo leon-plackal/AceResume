@@ -21,7 +21,7 @@ function Template2() {
                     <div className=' p-3' style={{fontSize:"18px",float:"left",display:"inline-block"}}>
                         <div >{dataStore.personalInfo.Email}</div>
                         <div>{dataStore.personalInfo.Mobile}</div>
-                        <div>{dataStore.personalInfo.Address1 +", "+ dataStore.personalInfo.Address2
+                        <div>{dataStore.personalInfo.Role +", "+ dataStore.personalInfo.Address2
                                 +",  "+dataStore.personalInfo.City+", "+ dataStore.personalInfo.State +", "+ dataStore.personalInfo.Pin}
                         </div>
                         
