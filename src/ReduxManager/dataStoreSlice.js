@@ -33,7 +33,7 @@ export const dataStoreSlice = createSlice({
                 End:""
         }],
         skills:[{skillName:""}] ,
-        selectedTemplate:"",
+        selectedTemplate:"Template4",
         imageFile:null,
         errorMessages:{},
         showErrorMessages:false,

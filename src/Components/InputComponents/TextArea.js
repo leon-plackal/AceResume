@@ -1,4 +1,6 @@
 import React,{useState,useEffect} from 'react'
+import TipTap from '../../Tiptap.jsx'
+import parser from 'html-react-parser'
 
 // This is a custom 'textarea' input component, that allows the application to provide textarea input field ,
 //here we have not put any validation checks because in our application we have not provided any validation requirements to textarea input component.
@@ -18,7 +20,7 @@ function TextArea(props) {
             //as there is no validation attribute passed to this component,as props from the parent so it will pass "" in place of errorMessage.
                     props.onChange(value, "")
                 
-            },500)
+            },300)
        }
         return()=>{
             clearTimeout(timerOutId)
@@ -26,19 +28,10 @@ function TextArea(props) {
     }, [value])
 
   return (
-    <div className='w-100 h-100 position-relative'>
-        <textarea
-            className={'input-style'} 
-            id={props.elementId}
-            rows={props.rows}
-            value={value}
-           
-            onChange ={(e)=>{
-                // this sets the 'value' state equal to the input given by the user.
-                setvalue(e.target.value)
-            }}
-            
-        ></textarea>
+    <div className='position-relative'>
+        <TipTap
+            setvalue={setvalue}
+        />
     </div>
   )
 }

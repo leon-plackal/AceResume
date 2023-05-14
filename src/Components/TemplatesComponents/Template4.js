@@ -1,5 +1,7 @@
 import React from 'react'
+import parser from 'html-react-parser'
 import { useSelector } from 'react-redux'
+
 const shortid = require('shortid')
 
 function Template4() {
@@ -24,6 +26,7 @@ function Template4() {
                 <div className=" justify-content-left d-flex text-lg-center" style={{fontSize:"17px",}}>{dataStore.personalInfo.Objective}</div>
             </div>
               
+            {/* work experience */}
             <div className='experience'>
                 <div className="">
                 <div className='d-flex justify-content-center'> 
@@ -38,11 +41,11 @@ function Template4() {
                                     <div className=''><h4 className='h6 m-0'>{item.orgName}</h4></div>
                                     <div className=''><b>{item.title}</b></div>
                                     
-                                    <div className=''>
+                                    <div className=' m-0'>
                                         <div className='position-absolute top-0 end-0'>{item.startYear} - {item.endYear}</div>
-                                        <ul className='mb-4'>
-                                        <li style={{fontSize:"16px"}}>{item.jobDescription}</li>
-                                        </ul>
+                                        <div className='tiptap-text-p'>
+                                        {parser(item.jobDescription)}
+                                        </div>
                                         
                                     </div>
                                 </div>

@@ -83,6 +83,7 @@ body{
   background-color: #ffffff;
   position: relative;
   transform: scale(0.6);
+  border-radius: 5px;
 }
 /* Template Select */
 .templates-container{
@@ -309,4 +310,26 @@ aspect-ratio: 0.9;
   height: 100%;
   background-color: #ffffff;
   padding: 2rem;
+  border-radius: 5px;
+
+}
+
+.tiptap-btn {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.tiptap-btn button{
+  padding: 2px;
+  background-color: transparent;
+  color: #656e83;
+}
+.tiptap-editor .ProseMirror{
+  padding: 1rem;
+  background-color: #d6dbe4;
+  height: 180px;
+  margin: 0;
+}
+.tiptap-text-p p{
+  margin: 0;
 }

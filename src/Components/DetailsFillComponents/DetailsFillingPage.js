@@ -149,9 +149,7 @@ function DetailsFillingPage(props) {
         <div className="details-container" style={{ maxWidth: "1920px", marginTop: "12px", backgroundColor: "#fafafa", }}>
 
             <div id='details-form-cont' >
-            <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+            
               <PersonalInfo></PersonalInfo>
               <Education></Education>
               <WorkEx></WorkEx>
