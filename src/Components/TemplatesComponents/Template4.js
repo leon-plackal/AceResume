@@ -15,11 +15,9 @@ function Template4() {
                 <hr/>
             </div>
             <div className='d-flex gap-3 justify-content-center h6 fw-light' >
-                <div className="" style={{backgroundColor:'white', color:"black"}}></div>
-                <div className=''>{dataStore.personalInfo.City+" - "+ dataStore.personalInfo.State +" - "+ dataStore.personalInfo.Pin}
+                <div className="" style={{color:"black"}}></div>
+                <div className=''>{dataStore.personalInfo.Role+" - "+ dataStore.personalInfo.City +" - "+  dataStore.personalInfo.Mobile+" - "+dataStore.personalInfo.Email}
                         </div>
-                <div style={{color:'black'}}>{dataStore.personalInfo.Mobile}</div>
-                <div style={{color:'black'}}>{dataStore.personalInfo.Email}</div>
             </div>
             <div>
                 <hr style={{height:"1px",backgroundColor:"#4b6982"}}/> 
@@ -70,6 +68,7 @@ function Template4() {
                                         <div className='position-relative' key={shortid.generate()}>
                                             <div className='h6 m-0'>{item.University}</div>
                                             <div className=''><b>{item.Degree}</b></div>
+                                            <div className='' style={{fontSize:'12px'}}>{parser(item.Type)}</div>
                                             
                                             <div className='position-absolute top-0 end-0'>{item.Start} - {item.End}</div>
 

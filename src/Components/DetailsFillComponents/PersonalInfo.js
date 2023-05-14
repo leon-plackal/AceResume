@@ -128,21 +128,6 @@ function PersonalInfo(props) {
                 </div>
               </div>
               <div className="input-container">
-                <div className='row'>
-                  <div className=''>
-                    <label htmlFor="inputAddress2" className="label">Address2</label>
-                  </div>
-                  <div className=''>
-                    <TextField type="text" elementId="inputAddress2" value={personalHeads.Address2}
-                          onChange={(value)=>{ onChangeHandler('Address2',value) }}
-                    />
-                  </div>
-                </div>
-              </div>
-          </div>
-    
-          <div className="input-row-cont">
-              <div className="input-container">
                 <div className='row '>
                   <div className=''>
                     <label htmlFor="inputCity" className="label">City</label>
@@ -157,38 +142,11 @@ function PersonalInfo(props) {
                     />
                   </div>
                 </div>
-              </div>
-              <div className="input-container">
-                <div className='row '>
-                  <div className=''>
-                    <label htmlFor="inputState"className="label" >State</label>
-                  </div>
-                  <div className=''>
-                    <select id="inputState" className="form-control" value={personalHeads.State}
-                            onChange={(e)=>{
-                                dispatch(updatePersonalInfo({
-                                  key: 'State',
-                                  value:e.target.value
-                              }))
-                            }}
-                    >
-                        <option>Select State</option>
-                        {stateNames.map((state,i)=>{
-                          return(
-                            <option key={i} value={state}>
-                              {state}
-                            </option>
-                            )
-                          })
-                        }
-                    </select>
-                  </div>
-                </div>
-              </div>
+              </div> 
           </div>
           
           <div className=" input-row-cont">
-              <div className="">
+              <div className="input-container-text">
                 <div className='row '>
                   <div className=''>
                     <label htmlFor="Textarea" className="label">Objective</label>

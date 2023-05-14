@@ -9,10 +9,7 @@ export const dataStoreSlice = createSlice({
                 Email:"",
                 Mobile:"",
                 Role:"",
-                Address2:"",
                 City:"",
-                State:"",
-                Pin:"",
                 Objective:""
         },
         workEx: [

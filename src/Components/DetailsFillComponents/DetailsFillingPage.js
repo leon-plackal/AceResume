@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import PersonalInfo from './PersonalInfo'
 import WorkEx from './WorkEx'
@@ -86,7 +85,7 @@ function DetailsFillingPage(props) {
       <div>
         <BuildNavBar></BuildNavBar>
       </div>
-      <div className="sidebar"  >
+      {/* <div className="sidebar"  >
               <li className="list-item" onClick={onSideNavLinkClick}>
                 <Link to={isFormValid ? "/detailsfillingpage/personalinfo" : '#'} className='no-text-decoration'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
@@ -118,7 +117,7 @@ function DetailsFillingPage(props) {
                 </Link>
               </li>
 
-            </div>
+            </div> */}
       <div className='build-container'>
 
         <div className="details-container" style={{ maxWidth: "1920px", backgroundColor: "#fafafa", }}>

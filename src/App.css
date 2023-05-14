@@ -16,6 +16,9 @@
 p{
   font-size: 1rem;
 }
+h6{
+  font-size: 14px;
+}
 .paragraph{
   font-weight: 300;
 }
@@ -56,6 +59,11 @@ body{
   display: flex;
   flex-direction: column;
   flex: 0 0 calc(50% - 20px);
+}
+.input-container-text{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .profile-picture{
   font-size: 16px;
@@ -327,11 +335,16 @@ aspect-ratio: 0.9;
   background-color: transparent;
   color: #656e83;
 }
+.tiptap-editor{
+  margin-right: 0.5rem;
+}
 .tiptap-editor .ProseMirror{
   padding: 1rem;
   background-color: #d6dbe4;
   height: 180px;
   margin: 0;
+  width: 100%;
+  border-radius: 3px;
 }
 .tiptap-text-p p{
   font-weight: 300;

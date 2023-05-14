@@ -108,7 +108,7 @@ function Education(props) {
 
                         </div>
                         <div className="input-row-cont">
-                            <div className="input-container">
+                            <div className="input-container-text">
                                 <label className='label' htmlFor="type">Summary</label>
                                 <TextArea elementId="Textarea" value={educationHeading.Type}
                                     onChange={(value) => { onChangeHandler('Type', value, index) }}
