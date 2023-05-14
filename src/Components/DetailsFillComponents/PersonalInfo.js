@@ -194,7 +194,7 @@ function PersonalInfo(props) {
                     <label htmlFor="Textarea" className="label">Objective</label>
                   </div>
                   <div className=''>
-                    <TextArea elementId="Textarea" rows="3" value={personalHeads.Objective}
+                    <TextArea elementId="Textarea" value={personalHeads.Objective}
                               onChange={(value)=>{ onChangeHandler('Objective',value) }}
                     />
                   </div>

@@ -2,8 +2,6 @@ import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import TextField from '../InputComponents/TextField'
 import { updateKeySkills ,addArrayElement,removeArrayElement } from '../../ReduxManager/dataStoreSlice'
-import TextArea from '../InputComponents/TextArea'
-
 
 // this component renders the key skills page inside the details filling page.
 
@@ -29,7 +27,7 @@ function KeySkills(props) {
     <div className="p-5 font" style={{textAlign:"left"}}>
         <h1>Key Skills</h1>
         <hr/>
-
+    
         {skillHeads.map((item,index)=>{
             return(
                 <div key={index} className='col-lg-5 col-md-6 col-12 mt-5'>
@@ -46,11 +44,7 @@ function KeySkills(props) {
                         }))
                       }}
                     />
-                    {/* <TextArea elementId="Textarea" value={item.skillName}
-                                            onChange={(value) => { onChangeHandler('jobDescription', value, index) }}
-                                        /> */}
                 </div>
-                
             )
         })}
         <div className='row mt-3 '>

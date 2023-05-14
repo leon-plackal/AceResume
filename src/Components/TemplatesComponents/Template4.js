@@ -23,7 +23,7 @@ function Template4() {
             </div>
             <div>
                 <hr style={{height:"1px",backgroundColor:"#4b6982"}}/> 
-                <div className=" justify-content-left d-flex text-lg-center" style={{fontSize:"17px",}}>{dataStore.personalInfo.Objective}</div>
+                <div className=" justify-content-left d-flex text-lg-center" style={{fontSize:"17px",}}>{parser(dataStore.personalInfo.Objective)}</div>
             </div>
               
             {/* work experience */}
@@ -59,7 +59,7 @@ function Template4() {
                 {/* Education */}
                 <div id='education'>
                     <div className='d-flex justify-content-center'> 
-                        <h3 className='h4 mt-4'>Education</h3>
+                        <h3 className='h4 mt-1'>Education</h3>
                     </div>
                     <hr style={{height:"1px",backgroundColor:"#4b6982"}}/> 
                     <div className=" text-left" >

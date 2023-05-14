@@ -82,7 +82,7 @@ body{
 #divToPrint{
   background-color: #ffffff;
   position: relative;
-  transform: scale(0.6);
+  transform: scale(0.71);
   border-radius: 5px;
 }
 /* Template Select */
@@ -305,6 +305,7 @@ aspect-ratio: 0.9;
 .template-global{
   height: 29.7cm;
   width: 21cm;
+  overflow: hidden;
 }
 .template-g-bg{
   height: 100%;

@@ -85,6 +85,6 @@ export const dataStoreSlice = createSlice({
 })
 
 export const { updatePersonalInfo, updateWorkEx,updateEducation,updateKeySkills,
-  updateErrorMessages, updateState,addArrayElement,removeArrayElement } = dataStoreSlice.actions
+  updateErrorMessages, updateState,addArrayElement,removeArrayElement, updateSkillsText } = dataStoreSlice.actions
 
 export default dataStoreSlice.reducer
