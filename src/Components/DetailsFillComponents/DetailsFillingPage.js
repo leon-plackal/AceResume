@@ -143,9 +143,10 @@ function DetailsFillingPage(props) {
                 ? <Template1 />
                 : selectedTemplate === "Template 2"
                   ? <Template2 />
-                  : selectedTemplate === "Template 3"
-                    ? <Template3 />
-                    : <Template4 />}
+                  : selectedTemplate === "Template 4"
+                    ? <Template4 />
+                    
+                    : <Template3 />}
           </div>
 
           <div className='preview-header'>

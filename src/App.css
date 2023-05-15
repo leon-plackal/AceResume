@@ -329,14 +329,18 @@ aspect-ratio: 0.9;
   margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
+  
 }
 .tiptap-btn button{
   padding: 2px;
   background-color: transparent;
   color: #656e83;
+  
 }
 .tiptap-editor{
   margin-right: 0.5rem;
+  overflow: hidden;
+
 }
 .tiptap-editor .ProseMirror{
   padding: 1rem;
@@ -345,6 +349,70 @@ aspect-ratio: 0.9;
   margin: 0;
   width: 100%;
   border-radius: 3px;
+  overflow: hidden;
+  z-index: 5;
+}
+.tiptap-editor-span::before{
+  content: '';
+  position:absolute;
+  width: 120px;
+  height: 40px;
+  background: #0edeae27;
+  animation: animate 6s linear infinite;
+  top: 90%;
+  left: 38%;
+  z-index: 2;
+}
+.tiptap-editor-span::after{
+  content: '';
+  position:absolute;
+  width: 120px;
+  height: 40px;
+  background: #12aabe24;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+  top: 90%;
+  left: 38%;
+  z-index: 2;
+}
+.tiptap-editor-span{
+  position: absolute;
+  inset: 5px;
+  background: #d6dbe4;
+  height: 190px;
+  transform: translateY(34px);
+  overflow: hidden;
+  border-radius: 3px;
+}
+.tt-editor{
+  margin: 0.3em;
+}
+
+@keyframes animate {
+  0%{ 
+    transform: translate(0,0);
+    background-image: linear-gradient(45deg,transparent, #36b0e4)
+  }
+  25%{
+    transform: translate(430px,0);
+    background-image: linear-gradient(45deg,transparent, #36b0e4)
+  }
+  40%{
+    transform: translate(430px,-200px);
+    background-image: linear-gradient(45deg,#36b0e4, transparent)
+  }
+  70%{
+    transform: translate(-390px,-200px);
+    background-image: linear-gradient(90deg,#36b0e4, transparent)
+  }
+  80%{
+    transform: translate(-390px,0);
+    background-image: linear-gradient(45deg,transparent, #36b0e4)
+  }
+  100%{
+    transform: translate(0,0);
+    background-image: linear-gradient(45deg,transparent, #36b0e4)
+  }
 }
 .tiptap-text-p p{
   font-weight: 300;

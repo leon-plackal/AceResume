@@ -28,10 +28,11 @@ function TextArea(props) {
     }, [value])
 
   return (
-    <div className='position-relative'>
+    <div className='position-relative tiptap-editor'>
         <TipTap
             setvalue={setvalue}
         />
+        <span className='tiptap-editor-span'></span>
     </div>
   )
 }

@@ -150,7 +150,7 @@ const TipTap = ({setvalue}) => {
     return (
         <div>
             <MenuBar editor={editor} />
-            <EditorContent editor={editor} className='tiptap-editor'/>
+            <EditorContent editor={editor} className='tt-editor'/>
         </div>
     )
 }
