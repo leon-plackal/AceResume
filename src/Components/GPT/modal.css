@@ -1,0 +1,49 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(190, 129, 202);
+}
+.openai-button{
+    width: 20px;
+    
+}
+
+.gtp-modal{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(120%, -50%);
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 400px;
+    min-width: 300px;
+    height: 400px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}

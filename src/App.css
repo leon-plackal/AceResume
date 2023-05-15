@@ -350,7 +350,7 @@ aspect-ratio: 0.9;
   width: 100%;
   border-radius: 3px;
   overflow: hidden;
-  z-index: 5;
+  z-index: 3;
 }
 .tiptap-editor-span::before{
   content: '';
@@ -359,7 +359,7 @@ aspect-ratio: 0.9;
   height: 40px;
   background: #0edeae27;
   animation: animate 6s linear infinite;
-  top: 90%;
+  top: 97%;
   left: 38%;
   z-index: 2;
 }
@@ -371,7 +371,7 @@ aspect-ratio: 0.9;
   background: #12aabe24;
   animation: animate 6s linear infinite;
   animation-delay: -3s;
-  top: 90%;
+  top: 97%;
   left: 38%;
   z-index: 2;
 }
@@ -394,19 +394,19 @@ aspect-ratio: 0.9;
     background-image: linear-gradient(45deg,transparent, #36b0e4)
   }
   25%{
-    transform: translate(430px,0);
+    transform: translate(440px,0);
     background-image: linear-gradient(45deg,transparent, #36b0e4)
   }
-  40%{
-    transform: translate(430px,-200px);
+  35%{
+    transform: translate(440px,-220px);
     background-image: linear-gradient(45deg,#36b0e4, transparent)
   }
   70%{
-    transform: translate(-390px,-200px);
+    transform: translate(-385px,-220px);
     background-image: linear-gradient(90deg,#36b0e4, transparent)
   }
   80%{
-    transform: translate(-390px,0);
+    transform: translate(-385px,0);
     background-image: linear-gradient(45deg,transparent, #36b0e4)
   }
   100%{
@@ -418,3 +418,27 @@ aspect-ratio: 0.9;
   font-weight: 300;
   margin: 0;
 }
+
+.openai-container{
+  height: 200px;
+  width: 100%;
+  background: #d7d7d7;
+}
+.gtp-textarea{
+  width: 100%;
+  background: #f6f5f5;
+}
+.gtp-btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:.5rem;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  color: #717171;
+}
+.gtp-btn-container h6{
+  margin: 0;
+}
+

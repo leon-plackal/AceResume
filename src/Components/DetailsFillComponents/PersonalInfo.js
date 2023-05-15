@@ -1,10 +1,10 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import ProfilePicUploadComponent from './ProfileUpload'
-import {stateNames} from '../Data/Data'
 import TextField from '../InputComponents/TextField'
 import TextArea from '../InputComponents/TextArea'
 import { updatePersonalInfo, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
+import GTPpopup from '../GPT/modal'
 
 //this component renders Personal Info page inside the details filling page.
 function PersonalInfo(props) {
@@ -156,6 +156,7 @@ function PersonalInfo(props) {
                               onChange={(value)=>{ onChangeHandler('Objective',value) }}
                     />
                   </div>
+                  
                 </div>
               </div>
           </div>

@@ -1,5 +1,5 @@
 {
-  "name": "front-end-project",
+  "name": "ace-resume",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "html-react-parser": "^3.0.16",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
+    "openai": "^3.2.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-bootstrap-icons": "^1.10.2",
