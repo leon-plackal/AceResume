@@ -4,7 +4,7 @@ import ProfilePicUploadComponent from './ProfileUpload'
 import TextField from '../InputComponents/TextField'
 import TextArea from '../InputComponents/TextArea'
 import { updatePersonalInfo, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
-import GTPpopup from '../GPT/modal'
+import GTPPersonalPopup from '../GPT/objectiveModal'
 
 //this component renders Personal Info page inside the details filling page.
 function PersonalInfo(props) {
@@ -147,15 +147,23 @@ function PersonalInfo(props) {
           
           <div className=" input-row-cont">
               <div className="input-container-text">
-                <div className='row '>
-                  <div className=''>
+                <div className='row'>
+                  <div className='label-container'>
                     <label htmlFor="Textarea" className="label">Objective</label>
                   </div>
-                  <div className=''>
-                    <TextArea elementId="Textarea" value={personalHeads.Objective}
-                              onChange={(value)=>{ onChangeHandler('Objective',value) }}
+                  <div className='text-area-container'>
+                    <div className='animate-overflow pers-gtp'></div>
+                    <TextArea elementId="Textarea" 
+                      value={personalHeads.Objective}
+                      onChange={(value)=>{ onChangeHandler('Objective',value) }}
                     />
-                  </div>
+                    <div className='gtp-btn-container'>
+                    <h6>Need Help?</h6>
+                    <GTPPersonalPopup/>
+                    </div>
+                    </div>
+                    
+                  
                   
                 </div>
               </div>

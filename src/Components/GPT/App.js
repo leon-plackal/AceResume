@@ -4,11 +4,10 @@ import AnswerSection from './AnswerSection';
 
 import { useState } from 'react';
 
-const App = () => {
+const App = ({message}) => {
 	const configuration = new Configuration({
 		apiKey: "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",
 	});
-	// console.log()
 	const openai = new OpenAIApi(configuration);
 
 	const [storedValues, setStoredValues] = useState([]);
@@ -51,7 +50,7 @@ const App = () => {
 			<div className="header-section">
 				{storedValues.length < 1 && (
 					<p>
-						AI Assisted Autocompletion
+						AI Assisted Autocompletion {message}
 					</p>
 				)}
 			</div>

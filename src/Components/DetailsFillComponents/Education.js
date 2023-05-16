@@ -2,8 +2,9 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import TextField from '../InputComponents/TextField'
 import { updateEducation, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
-import BottomNavigation from './BottomNavigation'
 import TextArea from '../InputComponents/TextArea'
+import GTPEducationPopup from '../GPT/educationModal'
+
 
 
 // this component renders the Education page inside the details filling page.
@@ -109,10 +110,22 @@ function Education(props) {
                         </div>
                         <div className="input-row-cont">
                             <div className="input-container-text">
-                                <label className='label' htmlFor="type">Summary</label>
-                                <TextArea elementId="Textarea" value={educationHeading.Type}
-                                    onChange={(value) => { onChangeHandler('Type', value, index) }}
-                                />
+                                <div className='row'>
+                                    <div className='label-container'>
+                                        <label htmlFor="type" className="label">Summary</label>
+                                    </div>
+                                    <div className='text-area-container edu-gtp'>
+                                        <TextArea elementId="Textarea"
+                                            value={educationHeading.Type}
+                                            onChange={(value) => { onChangeHandler('Type', value, index) }}
+                                        />
+                                        <div className='gtp-btn-container'>
+                                            <h6>Need Help?</h6>
+                                            <GTPEducationPopup />
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                         <div className="input-row-cont">

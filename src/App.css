@@ -338,11 +338,10 @@ aspect-ratio: 0.9;
   
 }
 .tiptap-editor{
+  position: absolute;
   margin-right: 0.5rem;
-  overflow: hidden;
-
 }
-.tiptap-editor .ProseMirror{
+.ProseMirror{
   padding: 1rem;
   background-color: #d6dbe4;
   height: 180px;
@@ -351,8 +350,31 @@ aspect-ratio: 0.9;
   border-radius: 3px;
   overflow: hidden;
   z-index: 3;
+  border: none;
+  outline: none;
 }
-.tiptap-editor-span::before{
+.text-area-container{
+  padding: 1rem;
+  height: 260px;
+  margin: 0;
+  width: 100%;
+  border-radius: 3px;
+  z-index: 3;
+  position: relative;
+  overflow: visible;
+}
+.animate-overflow{
+  position: absolute;
+  background: #d6dbe4;
+  height: 195px;
+  width: 94%;
+  transform: translate(4px, 38px);
+  overflow: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.activeai::before{
   content: '';
   position:absolute;
   width: 120px;
@@ -363,7 +385,7 @@ aspect-ratio: 0.9;
   left: 38%;
   z-index: 2;
 }
-.tiptap-editor-span::after{
+.activeai::after{
   content: '';
   position:absolute;
   width: 120px;
@@ -375,15 +397,7 @@ aspect-ratio: 0.9;
   left: 38%;
   z-index: 2;
 }
-.tiptap-editor-span{
-  position: absolute;
-  inset: 5px;
-  background: #d6dbe4;
-  height: 190px;
-  transform: translateY(34px);
-  overflow: hidden;
-  border-radius: 3px;
-}
+
 .tt-editor{
   margin: 0.3em;
 }
@@ -394,11 +408,11 @@ aspect-ratio: 0.9;
     background-image: linear-gradient(45deg,transparent, #36b0e4)
   }
   25%{
-    transform: translate(440px,0);
+    transform: translate(435px,0);
     background-image: linear-gradient(45deg,transparent, #36b0e4)
   }
   35%{
-    transform: translate(440px,-220px);
+    transform: translate(435px,-220px);
     background-image: linear-gradient(45deg,#36b0e4, transparent)
   }
   70%{
@@ -434,8 +448,8 @@ aspect-ratio: 0.9;
   align-items: center;
   gap:.5rem;
   position: absolute;
-  top: 0;
-  right: 5px;
+  top: 20px;
+  right: 30px;
   color: #717171;
 }
 .gtp-btn-container h6{

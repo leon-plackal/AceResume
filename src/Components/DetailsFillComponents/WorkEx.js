@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import TextField from '../InputComponents/TextField'
 import TextArea from '../InputComponents/TextArea'
 import { updateWorkEx, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
+import GTPWorkPopup from '../GPT/workModal'
 
 // this component renders the work experience page inside the details filling page.
 function WorkEx(props) {
@@ -38,12 +39,12 @@ function WorkEx(props) {
                 startYear: "",
                 endYear: "",
                 jobDescription: "",
-                extraJobDesc:[{Jobdescription:""}],
+                extraJobDesc: [{ Jobdescription: "" }],
             },
 
         }))
     }
-    
+
     function RemoveExperience() {
         //this function deletes the latest saved details in the workEx element, when the user clicks on the remove button.
         dispatch(removeArrayElement({ key: "workEx" }))
@@ -158,15 +159,30 @@ function WorkEx(props) {
                             </div>
                             <div className="tiptap-container">
                                 <div className="input-container">
-                                    <label htmlFor="Textarea" className="label">Job-description
+                                    {/* <label htmlFor="Textarea" className="label">Job-description
                                         <TextArea elementId="Textarea" value={workHeading.jobDescription}
                                             onChange={(value) => { onChangeHandler('jobDescription', value, index) }}
                                         />
-                                    </label>
-                                    
+                                    </label> */}
+                                    <div className='row'>
+                                        <div className='label-container'>
+                                            <label htmlFor="Textarea" className="label">Job-description</label>
+                                        </div>
+                                        <div className='text-area-container'>
+                                            <TextArea elementId="Textarea"
+                                                value={workHeading.jobDescription}
+                                                onChange={(value) => { onChangeHandler('jobDescription', value, index) }}
+                                            />
+                                            <div className='gtp-btn-container'>
+                                                <h6>Need Help?</h6>
+                                                <GTPWorkPopup />
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-                            
+
 
                         </div>
                     </div>

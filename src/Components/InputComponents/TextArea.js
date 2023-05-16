@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import TipTap from '../../Tiptap.jsx'
-import GTPpopup from '../GPT/modal'
+import GTPpopup from '../GPT/workModal'
 
 
 // This is a custom 'textarea' input component, that allows the application to provide textarea input field ,
@@ -30,16 +30,9 @@ function TextArea(props) {
 
   return (
     <div className='position-relative tiptap-editor'>
-        <div className='gtp-btn-container'>
-        <h6>Need Help?</h6>
-        <GTPpopup/>
-        </div>
         <TipTap
             setvalue={setvalue}
         />
-        
-        
-        <span className='tiptap-editor-span'></span>
     </div>
   )
 }
