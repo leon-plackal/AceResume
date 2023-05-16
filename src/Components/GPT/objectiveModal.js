@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import "./modal.css";
 import logo from '../Data/images/openai-svg.svg'
+import xbutton from '../Data/images/x-symbol.svg'
 import GTP from '../GPT/App'
+import { useSelector } from 'react-redux'
 
 export default function Modal() {
   const [modal, setModal] = useState(false);
   const [showAnim, setshowAnim] = useState(false)
-  const T = document.querySelector(".pers-gtp");
+  const objectiveHeader = document.querySelector(".pers-gtp");
+  const dataStore = useSelector(state => state.dataStore)
+  var role = dataStore.personalInfo.Role
 
   function addClass(el,name) {
     el.className += ' '+name;
@@ -20,31 +24,17 @@ export default function Modal() {
 
     setshowAnim(!showAnim)
     if (!showAnim) {
-      addClass(T, 'activeai')
+      Array.from(document.querySelectorAll('.activeai')).forEach(
+        (el) => el.classList.remove('activeai')
+      );
+      addClass(objectiveHeader, 'activeai')
+
+      
     } else{
-      removeClass(T, 'activeai')
+      removeClass(objectiveHeader, 'activeai')
     }
-    // T.classList.add('activeai');
 
-
-    // if (T.style.display === 'none'){
-    //   T.style.display = 'block'
-    // } else{
-    //   T.style.display = 'none'
-    // }
-
-    const mylogo = document.querySelector('.gtp-modal');
-    if (mylogo) {
-    mylogo.classList.add('fade');
-    }
-    
   };
-
-  // if(modal) {
-  //   document.body.classList.add('active-modal')
-  // } else {
-  //   document.body.classList.remove('active-modal')
-  // }
 
   return (
     <>
@@ -56,10 +46,11 @@ export default function Modal() {
         <div className="gtp-modal">
           <div onClick={toggleModal}></div>
           <div className="modal-content">
-          <GTP message={"Objective"}/>
+          <GTP message={`write a good resume summary for a ${role}`}/>
             <button className="close-modal" onClick={toggleModal}>
-              CLOSE
+              <img src={xbutton}/>
             </button>
+            
           </div>
         </div>
       )}

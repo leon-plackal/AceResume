@@ -157,31 +157,29 @@ function WorkEx(props) {
                                     </label>
                                 </div>
                             </div>
-                            <div className="tiptap-container">
-                                <div className="input-container">
-                                    {/* <label htmlFor="Textarea" className="label">Job-description
-                                        <TextArea elementId="Textarea" value={workHeading.jobDescription}
+                            
+                            <div className="input-row-cont">
+                            <div className="input-container-text">
+                                <div className='row'>
+                                    <div className='label-container'>
+                                        <label htmlFor="type" className="label">Summary</label>
+                                    </div>
+
+                                    <div className='text-area-container'>
+                                        <div className='animate-overflow work-gtp'></div>
+                                        <TextArea elementId="Textarea"
+                                            value={workHeading.jobDescription}
                                             onChange={(value) => { onChangeHandler('jobDescription', value, index) }}
                                         />
-                                    </label> */}
-                                    <div className='row'>
-                                        <div className='label-container'>
-                                            <label htmlFor="Textarea" className="label">Job-description</label>
+                                        <div className='gtp-btn-container'>
+                                            <h6>Need Help?</h6>
+                                            <GTPWorkPopup />
                                         </div>
-                                        <div className='text-area-container'>
-                                            <TextArea elementId="Textarea"
-                                                value={workHeading.jobDescription}
-                                                onChange={(value) => { onChangeHandler('jobDescription', value, index) }}
-                                            />
-                                            <div className='gtp-btn-container'>
-                                                <h6>Need Help?</h6>
-                                                <GTPWorkPopup />
-                                            </div>
-                                        </div>
-
                                     </div>
+
                                 </div>
                             </div>
+                        </div>
 
 
                         </div>

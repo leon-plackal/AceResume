@@ -2,11 +2,25 @@ import React, { useState } from "react";
 import "./modal.css";
 import logo from '../Data/images/openai-svg.svg'
 import GTP from '../GPT/App'
+import xbutton from '../Data/images/x-symbol.svg'
+import { useSelector } from 'react-redux'
 
 export default function Modal() {
   const [modal, setModal] = useState(false);
   const [showAnim, setshowAnim] = useState(false)
-  const T = document.querySelector(".tiptap-editor-span");
+  const workHeader = document.querySelector(".work-gtp");
+  const dataStore = useSelector(state => state.dataStore)
+  var role = dataStore.workEx[0].title
+  var yrsExperience = dataStore.workEx[0].endYear - dataStore.workEx[0].startYear
+  let experience = 'mid-level'
+  if (yrsExperience > 5){
+    experience = 'senior'
+  } else if (yrsExperience < 2){
+    experience = 'junior'
+  } else{
+    experience = 'mid-level'
+  }
+  console.log(experience, yrsExperience)
 
   function addClass(el,name) {
     el.className += ' '+name;
@@ -20,31 +34,17 @@ export default function Modal() {
 
     setshowAnim(!showAnim)
     if (!showAnim) {
-      addClass(T, 'activeai')
+      Array.from(document.querySelectorAll('.activeai')).forEach(
+        (el) => el.classList.remove('activeai')
+      );
+      addClass(workHeader, 'activeai')
+
+      
     } else{
-      removeClass(T, 'activeai')
+      removeClass(workHeader, 'activeai')
     }
-    // T.classList.add('activeai');
 
-
-    // if (T.style.display === 'none'){
-    //   T.style.display = 'block'
-    // } else{
-    //   T.style.display = 'none'
-    // }
-
-    const mylogo = document.querySelector('.gtp-modal');
-    if (mylogo) {
-    mylogo.classList.add('fade');
-    }
-    
   };
-
-  // if(modal) {
-  //   document.body.classList.add('active-modal')
-  // } else {
-  //   document.body.classList.remove('active-modal')
-  // }
 
   return (
     <>
@@ -56,9 +56,9 @@ export default function Modal() {
         <div className="gtp-modal">
           <div onClick={toggleModal}></div>
           <div className="modal-content">
-          <GTP message={"Work"}/>
+          <GTP message={`write a good resume job experience section for a ${role} with ${experience} experience`}/>
             <button className="close-modal" onClick={toggleModal}>
-              CLOSE
+              <img src={xbutton}/>
             </button>
           </div>
         </div>

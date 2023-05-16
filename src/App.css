@@ -24,7 +24,7 @@ h6{
 }
 button{
   padding: 1rem 2rem;
-  background-color: #347ec7;
+  background-color: #1c78d4;
   border: none;
   border-radius: 3px;
   color: white;
@@ -348,7 +348,7 @@ aspect-ratio: 0.9;
   margin: 0;
   width: 100%;
   border-radius: 3px;
-  overflow: hidden;
+  overflow: scroll;
   z-index: 3;
   border: none;
   outline: none;
@@ -371,7 +371,6 @@ aspect-ratio: 0.9;
   transform: translate(4px, 38px);
   overflow: hidden;
   border-radius: 3px;
-  overflow: hidden;
 }
 
 .activeai::before{

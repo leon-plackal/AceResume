@@ -30,7 +30,7 @@
     overflow: hidden;
     left: 100%;
     top: 50%;
-    width: 560px;
+    width: 500px;
     margin-left: 16px;
     border-radius: 3px;
     background: rgb(255, 255, 255);
@@ -50,20 +50,107 @@
 
 .modal-content {
     position: absolute;
-    background: #f1f1f1;
-    padding: 14px 28px;
+    background: #f0f0f0;
+    padding: 14px 0.5rem;
     border-radius: 3px;
     width: 100%;
     height: 100%;
     -webkit-box-shadow: 1px 5px 8px -1px rgba(0,0,0,0.82); 
     box-shadow: 1px 5px 8px -1px rgba(0,0,0,0.82);
     z-index: 10;
-
+    overflow: scroll;
 }
 
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    right: 15px;
     padding: 5px 7px;
+    border-radius: 20px;
+    height: 22px;
+    width: 22px;
+    background: #ffffff00;
+}
+.close-modal img {
+    height: 10px;
+}
+
+.gtp-form{
+    padding: 0rem .5rem;
+}
+.gtp-form textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    height: 4rem;
+    border-radius: 3px;
+    background: #ffffff;
+    font-size: 12px;
+}
+.search-btn{
+    position: absolute;
+    padding: 5px;
+    right: 1.5rem;
+    top: 2.5rem;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    background:rgb(224, 224, 224);
+}
+.clear-btn{
+    position: fixed;
+    padding: 5px;
+    right: 3rem;
+    bottom: 1.2rem;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    background:rgb(224, 224, 224);
+}
+.answer-container{
+    padding: 0.5rem;
+}
+.answer,.question{
+    padding: 0.5rem;
+    font-size: 12px;
+}
+.answer{
+    background-color: rgb(212, 212, 212);
+    margin: 0;
+    border-radius: 3px;
+    position: relative;
+}
+.question{
+    margin: 0;
+}
+.hr-line{
+    margin: 0.5rem;
+}
+.gpt-tag-container{
+    padding: 0.5rem;
+}
+.gpt-tags{
+    display: flex;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+button:empty{
+    display: none;
+}
+.copy-icon{
+    cursor: pointer;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 15px;
+    background: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
