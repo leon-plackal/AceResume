@@ -4,6 +4,7 @@ import TextField from '../InputComponents/TextField'
 import TextArea from '../InputComponents/TextArea'
 import { updateWorkEx, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
 import GTPWorkPopup from '../GPT/workModal'
+import TipTapWork from '../InputComponents/TiptapWork'
 
 // this component renders the work experience page inside the details filling page.
 function WorkEx(props) {
@@ -166,11 +167,15 @@ function WorkEx(props) {
                                     </div>
 
                                     <div className='text-area-container'>
+                                        
                                         <div className='animate-overflow work-gtp'></div>
-                                        <TextArea elementId="Textarea"
+                                        {/* <TextArea elementId="Textarea"
                                             value={workHeading.jobDescription}
                                             onChange={(value) => { onChangeHandler('jobDescription', value, index) }}
-                                        />
+                                        /> */}
+                                        <TipTapWork
+                                        setvalue={index}/>
+
                                         <div className='gtp-btn-container'>
                                             <h6>Need Help?</h6>
                                             <GTPWorkPopup />

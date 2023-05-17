@@ -125,8 +125,8 @@ function DetailsFillingPage(props) {
             <div id='details-form-cont' >
             
               <PersonalInfo></PersonalInfo>
-              <Education></Education>
               <WorkEx></WorkEx>
+              <Education></Education>
               <KeySkills></KeySkills>
 
             </div>

@@ -5,7 +5,7 @@ import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import React from 'react'
 import { FaBold, FaItalic, FaListOl, FaListUl, FaRedo, FaStrikethrough, FaUndo } from 'react-icons/fa'
-import { updateEducation, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
+import { updateWorkEx, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
 const MenuBar = ({ editor }) => {
@@ -81,7 +81,12 @@ const MenuBar = ({ editor }) => {
                 >
                     <FaListUl />
                 </button>
-                
+                <button
+                    onClick={() => editor.chain().focus().toggleOrderedList().run()}
+                    className={editor.isActive('orderedList') ? 'is-active' : ''}
+                >
+                    <FaListOl />
+                </button>
 
                 
                 <button
@@ -128,7 +133,7 @@ const TipTap = (index) => {
 //onchange 
 const onChangeHandler = (key, value, index, errorMessage = undefined) => {
     //this function is called each time when the user provides input to the targeted'TextField'
-    dispatch(updateEducation({
+    dispatch(updateWorkEx({
         //this function updates the targeted key of the workEx element of dataStore in dataStoreSlice.js //
         key: key,
         value: value,
@@ -145,7 +150,7 @@ const onChangeHandler = (key, value, index, errorMessage = undefined) => {
 }
 
   console.log(index["setvalue"])
-  console.log(dataStore.education[index["setvalue"]].Type)
+  console.log(dataStore.workEx[index["setvalue"]].title)
     const editor = useEditor({
         extensions: [
             Color.configure({ types: [TextStyle.name, ListItem.name] }),
@@ -161,10 +166,10 @@ const onChangeHandler = (key, value, index, errorMessage = undefined) => {
                 },
             }),
         ],
-        content: dataStore.education[index["setvalue"]].Type,
+        content: dataStore.workEx[index["setvalue"]].jobDescription,
         onUpdate: ({editor}) => {
             const html = editor.getHTML();
-            onChangeHandler('Type', html, index["setvalue"])
+            onChangeHandler('jobDescription', html, index["setvalue"])
         }
     })
 

@@ -4,7 +4,7 @@ import TextField from '../InputComponents/TextField'
 import { updateEducation, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
 import TextArea from '../InputComponents/TextArea'
 import GTPEducationPopup from '../GPT/educationModal'
-
+import TiptapEducation from '../InputComponents/TiptapEducation'
 
 
 // this component renders the Education page inside the details filling page.
@@ -117,10 +117,12 @@ function Education(props) {
 
                                     <div className='text-area-container'>
                                         <div className='animate-overflow edu-gtp'></div>
-                                        <TextArea elementId="Textarea"
+                                        {/* <TextArea elementId="Textarea"
                                             value={educationHeading.Type}
                                             onChange={(value) => { onChangeHandler('Type', value, index) }}
-                                        />
+                                        /> */}
+                                        <TiptapEducation
+                                        setvalue={index}/>
                                         <div className='gtp-btn-container'>
                                             <h6>Need Help?</h6>
                                             <GTPEducationPopup />
