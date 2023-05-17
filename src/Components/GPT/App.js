@@ -1,12 +1,13 @@
 import { Configuration, OpenAIApi } from 'openai';
 import FormSection from './FormSection';
 import AnswerSection from './AnswerSection';
+import AiGenerated from './AIgenerated';
 import "./modal.css";
 import { useSelector } from 'react-redux'
 
 import { useState } from 'react';
 
-const App = ({ message, location }) => {
+const App = ({ message, workDetails }) => {
 	const configuration = new Configuration({
 		apiKey: "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",
 	});
@@ -16,17 +17,21 @@ const App = ({ message, location }) => {
 
 	const [storedValues, setStoredValues] = useState([]);
 	const [tags, setTags] = useState([]);
+	const [expRec, setExpRec] = useState([])
 	const clearResponse = () => {
 		setStoredValues([])
-	}
+		setTags([])
+	};
+
+	const generateAIAnswer = async (workDetails)=>{
+		// some code…
+		
+	   }
 
 	const generateTags = async (prompt) => {
 		setTags([])
 		const tg = prompt["message"]
-		const workPrompt = prompt["workExRec"]
-		console.log(prompt["workExRec"])
 		// const result = tg.slice(1, -1);
-
 		let options = {
 			model: 'text-davinci-003',
 			temperature: 0,
@@ -43,11 +48,12 @@ const App = ({ message, location }) => {
 		if (response.data.choices) {
 			setTags([
 				{
-					answer: response.data.choices[0].text,
+					answer: response.data.choices[0].text.trim(),
 				},
 				...tags
 			]);
 		}
+		
 	}
 
 	const generateResponse = async (newQuestion, setNewQuestion) => {
@@ -78,10 +84,11 @@ const App = ({ message, location }) => {
 			setStoredValues([
 				{
 					question: newQuestion,
-					answer: response.data.choices[0].text,
+					answer: response.data.choices[0].text.trim(),
 				},
 				...storedValues,
 			]);
+			console.log(response.data.choices[0].text)
 			setNewQuestion('');
 		}
 	};
@@ -96,21 +103,11 @@ const App = ({ message, location }) => {
 					{role}
 				</button>
 			</div>
-
-			<div className="header-section">
-				{storedValues.length < 1 && (
-					<p>
-						{/* AI Assisted Autocompletion {message} */}
-					</p>
-				)}
-			</div>
-
-			<AnswerSection storedValues={tags} />
 			{storedValues.length > 0 && <AnswerSection storedValues={storedValues} />}
+			<AiGenerated storedValues={tags} />
 			<button className="clear-btn mt-1" onClick={() => clearResponse()}>
 				Clear
 			</button>
-
 
 		</div>
 	);

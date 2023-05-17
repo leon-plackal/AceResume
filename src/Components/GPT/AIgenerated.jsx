@@ -12,7 +12,6 @@ const AnswerSection = ({ storedValues }) => {
                 {storedValues.map((value, index) => {
                     return (
                         <div className="answer-section" key={index}>
-                            <p className="question">Q: {value.question}</p>
                             <div className="answer">{value.answer}
                                 <div
                                     className="copy-icon"

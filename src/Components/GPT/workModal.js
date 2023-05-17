@@ -56,7 +56,8 @@ export default function Modal() {
         <div className="gtp-modal">
           <div onClick={toggleModal}></div>
           <div className="modal-content">
-          <GTP message={`write a good resume job experience section for a ${role} with ${experience} experience`}/>
+          <GTP message={`write a good resume job experience section for a ${role} with ${experience} experience`}
+          />
             <button className="close-modal" onClick={toggleModal}>
               <img src={xbutton}/>
             </button>

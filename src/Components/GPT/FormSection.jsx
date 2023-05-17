@@ -1,11 +1,7 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux'
 
 const FormSection = ({ generateResponse }) => {
     const [newQuestion, setNewQuestion] = useState('');
-    const dataStore = useSelector(state => state.dataStore)
-    var role = dataStore.personalInfo
-    
     return (
         <div className="form-section">
             <textarea

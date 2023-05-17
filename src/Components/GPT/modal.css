@@ -116,6 +116,10 @@
 .answer,.question{
     padding: 0.5rem;
     font-size: 12px;
+    white-space: pre-wrap;
+    -ms-overflow-style: none;
+     scrollbar-width: none;
+    text-align: left;
 }
 .answer{
     background-color: rgb(212, 212, 212);
