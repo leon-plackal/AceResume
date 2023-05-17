@@ -14,7 +14,7 @@ function AboutUs() {
     
     const dispatch = useDispatch();
     return (
-    <body>
+    <div>
             <div>
                 <BuildNavBar/>
             </div>
@@ -76,7 +76,7 @@ function AboutUs() {
                 </div>
             </div>
         </div>
-        </body>
+        </div>
     )
 }
 

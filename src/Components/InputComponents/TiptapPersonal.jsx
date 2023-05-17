@@ -5,6 +5,8 @@ import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import React from 'react'
 import { FaBold, FaItalic, FaListOl, FaListUl, FaRedo, FaStrikethrough, FaUndo } from 'react-icons/fa'
+import { updatePersonalInfo, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
+import { useSelector, useDispatch } from 'react-redux'
 
 const MenuBar = ({ editor }) => {
     if (!editor) {
@@ -53,7 +55,7 @@ const MenuBar = ({ editor }) => {
                 >
                     <FaStrikethrough />
                 </button>
-                
+
                 <button
                     onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
                     className={editor.isActive('heading', { level: 6 }) ? 'is-active' : ''}
@@ -86,7 +88,7 @@ const MenuBar = ({ editor }) => {
                     <FaListOl />
                 </button>
 
-                
+
                 <button
                     onClick={() => editor.chain().focus().undo().run()}
                     disabled={
@@ -97,7 +99,7 @@ const MenuBar = ({ editor }) => {
                             .run()
                     }
                 >
-                    <FaUndo/>
+                    <FaUndo />
 
                 </button>
                 <button
@@ -110,7 +112,7 @@ const MenuBar = ({ editor }) => {
                             .run()
                     }
                 >
-                    <FaRedo/>
+                    <FaRedo />
 
                 </button>
                 <button
@@ -124,7 +126,25 @@ const MenuBar = ({ editor }) => {
     )
 }
 
-const TipTap = ({setvalue}) => {
+const TipTap = () => {
+    const personalHeads = useSelector(state => state.dataStore.personalInfo)
+    const dispatch = useDispatch();
+
+    const onChangeHandler = (key, value, errorMessage = undefined) => {
+        //this function is called each time when the user provides input to the targeted'TextField'
+        dispatch(updatePersonalInfo({
+            //this function updates the targeted key of the personalInfo element of dataStore in dataStoreSlice.js //
+            key: key,
+            value: value
+        }))
+        if (errorMessage !== undefined) {
+            dispatch(updateErrorMessages({
+                // this function is called each time when there is a validatin check applied on the 'TextField' component and it inserts án object {key: errorMessage} into the errorMessages of dataStoreSlice.
+                key: key,
+                value: errorMessage
+            }))
+        }
+    }
     const editor = useEditor({
         extensions: [
             Color.configure({ types: [TextStyle.name, ListItem.name] }),
@@ -132,25 +152,25 @@ const TipTap = ({setvalue}) => {
             StarterKit.configure({
                 bulletList: {
                     keepMarks: true,
-                    keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
+                    keepAttributes: false,
                 },
                 orderedList: {
                     keepMarks: true,
-                    keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
+                    keepAttributes: false,
                 },
             }),
         ],
-        content: ``,
-        onUpdate: ({editor}) => {
+        content: `${personalHeads.Objective}`,
+        onUpdate: ({ editor }) => {
             const html = editor.getHTML();
-            setvalue(html)
+            onChangeHandler('Objective', html)
         }
     })
 
     return (
         <div>
             <MenuBar editor={editor} />
-            <EditorContent editor={editor} className='tt-editor'/>
+            <EditorContent editor={editor} className='tt-editor' />
         </div>
     )
 }

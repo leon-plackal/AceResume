@@ -10,7 +10,7 @@ function Home() {
     
     const dispatch = useDispatch();
     return (
-        <body>
+        <div>
         <div><NavBar></NavBar></div>
         
         <div className='home-container'>
@@ -54,7 +54,7 @@ function Home() {
                 </div>
             </section>
         </div>
-        </body>
+        </div>
     )
 }
 

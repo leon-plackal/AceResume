@@ -15,32 +15,37 @@ function MyResume() {
     const selectedTemplate = useSelector(state => state.dataStore.selectedTemplate)
     const [showModal, setShowModal] = useState(false)
     const downloadComponentPDF = () => {
+
+        function printCV(){
+        }
         //this function is called when the user clicks on the 'Save Resume' button.
         // it takes the 'div' element with id 'divToPrint' and then convert it into pdf format which is downloaded into the user's computer memory.
-        const input = document.getElementById('divToPrint');
-        html2canvas(input, { scrollY: -window.scrollY })
-        .then((canvas) => {
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jsPDF("p", "px", "a4");
-            var ratio = canvas.width/canvas.height;
-            var width = pdf.internal.pageSize.getWidth();
-            var height = width / ratio;
-            pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-            pdf.save("resume.pdf");
-        })
-        .then(()=>{
-            setTimeout(
-                // this function shows the modal popup named 'SuccessMessage' after the resume has been successfully downloaded and make it to disappear on its own after 6000 ms//
-                ()=>{
-                    setShowModal(true)
-                    setTimeout(
-                        ()=>{
-                            setShowModal(false)  
-                        }
-                    ,6000)
-                }
-            ,100)
-        })
+        // const input = document.getElementById('divToPrint');
+        window.print();
+
+        // html2canvas(input, { scrollY: -window.scrollY })
+        // .then((canvas) => {
+        //     const imgData = canvas.toDataURL('image/png');
+        //     const pdf = new jsPDF("p", "px", "a4");
+        //     var ratio = canvas.width/canvas.height;
+        //     var width = pdf.internal.pageSize.getWidth();
+        //     var height = width / ratio;
+        //     pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
+        //     pdf.save("resume.pdf");
+        // })
+        // .then(()=>{
+        //     setTimeout(
+        //         // this function shows the modal popup named 'SuccessMessage' after the resume has been successfully downloaded and make it to disappear on its own after 6000 ms//
+        //         ()=>{
+        //             setShowModal(true)
+        //             setTimeout(
+        //                 ()=>{
+        //                     setShowModal(false)  
+        //                 }
+        //             ,6000)
+        //         }
+        //     ,100)
+        // })
     ;
       }
     

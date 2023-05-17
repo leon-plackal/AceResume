@@ -24,7 +24,7 @@ function Template4() {
                         <div></div>
                         <div>
                             <div className='' style={{ color: "black", fontSize: "25px", fontWeight: '500' }}>{dataStore.personalInfo.firstName + " " + dataStore.personalInfo.lastName + ", " + dataStore.personalInfo.Role}</div>
-                            <div className="justify-content-left d-flex" style={{ textAlign: 'left', fontWeight: '500' }}>{parser(dataStore.personalInfo.Objective)}</div>
+                            <div className="" style={{ textAlign: 'left', fontWeight: '500' }}>{parser(dataStore.personalInfo.Objective)}</div>
                         </div>
                     </div>
 
