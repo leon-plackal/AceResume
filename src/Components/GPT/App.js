@@ -72,7 +72,6 @@ const App = ({ message, workDetails }) => {
 		} else if (newQuestion === "jojo amogus") {
 			promptvar = `print the first element of this array = ["IS THAT A GODDAMN JOJO REFERENCE??!!!?? DOES AI UNDERSTAND A JOJO REFERENCE??!!?? NAHHHHHH"]`
 		}
-		console.log(promptvar)
 		let completeOptions = {
 			...options,
 			prompt: promptvar,
@@ -88,7 +87,6 @@ const App = ({ message, workDetails }) => {
 				},
 				...storedValues,
 			]);
-			console.log(response.data.choices[0].text)
 			setNewQuestion('');
 		}
 	};

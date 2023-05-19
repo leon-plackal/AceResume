@@ -4,7 +4,6 @@ import { FaRegCopy} from 'react-icons/fa'
 const AnswerSection = ({ storedValues }) => {
     const copyText = (text) => {
         let moddedText = text.replaceAll('•', '')
-        console.log(moddedText)
         navigator.clipboard.writeText(moddedText);
     };
 

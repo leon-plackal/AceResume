@@ -70,7 +70,7 @@ function Education(props) {
     }
     let year = yearRange(2000, 2023)
     return (
-        <div style={{ padding: "4rem", textAlign: "left", }}>
+        <div className='section-container' style={{ padding: "4rem", textAlign: "left", }}>
             <h2>Education details</h2>
             <hr />
             {educationHeads.map((educationHeading, index) => {
@@ -135,7 +135,7 @@ function Education(props) {
                         <div className="input-row-cont">
                             <div className="input-container">
                                 <label htmlFor="Start" className="label">Start year</label>
-                                <select id="Start" className="form-control" value={educationHeading.Start}
+                                <select id="Start" className="form-select" value={educationHeading.Start}
                                     onChange={(e) => {
                                         dispatch(updateEducation({
                                             key: 'Start',
@@ -158,7 +158,7 @@ function Education(props) {
                             </div>
                             <div className="input-container">
                                 <label htmlFor="end" className="label"> End year</label>
-                                <select id="end" className="form-control" value={educationHeading.End}
+                                <select id="end" className="form-select" value={educationHeading.End}
                                     onChange={(e) => {
                                         dispatch(updateEducation({
                                             key: 'End',
@@ -185,15 +185,15 @@ function Education(props) {
 
                 )
             })}
-            <div className='d-flex'>
+            <div className='add-remove-container'>
                 <button
-                    className='mt-3 me-5 mb-3 ml-1 p-2'
+                    className=''
                     onClick={AddEducation}
                 >
                     Add new
                 </button>
                 <button
-                    className='mt-3 ms-5 mb-3 ml-1 p-2'
+                    className=''
                     onClick={RemoveEducation}
                 >
                     Remove

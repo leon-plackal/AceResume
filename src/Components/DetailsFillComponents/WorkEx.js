@@ -72,7 +72,7 @@ function WorkEx(props) {
     }
     let year = yearRange(2000, 2023)
     return (
-        <div style={{ padding: "4rem", textAlign: "left", }}>
+        <div className='section-container' style={{ padding: "4rem", textAlign: "left", }}>
             <h2>Work Experience</h2>
 
             {workHeads.map((workHeading, index) => {
@@ -83,7 +83,7 @@ function WorkEx(props) {
                             <hr />
                             <div className="input-row-cont">
                                 <div className="input-container">
-                                    <label className="label" htmlFor="title" >Job Title*
+                                    <label className="label" htmlFor="title" >Job Title*</label>
                                         <TextField
                                             type="text" elementId="title" placeholder='Enter Job Title'
                                             value={workHeading.title}
@@ -100,10 +100,10 @@ function WorkEx(props) {
                                                 required: true
                                             }}
                                         />
-                                    </label>
+                                    
                                 </div>
                                 <div className="input-container">
-                                    <label className="label" htmlFor="name" >Organization Name*
+                                    <label className="label" htmlFor="name" >Organization Name*</label>
                                         <TextField type="text" elementId="name" placeholder='Enter Organization Name'
                                             value={workHeading.orgName}
                                             onChange={(value, errorMessage) => { onChangeHandler('orgName', value, index, errorMessage) }}
@@ -111,13 +111,13 @@ function WorkEx(props) {
                                                 required: true
                                             }}
                                         />
-                                    </label>
+                                    
                                 </div>
                             </div>
                             <div className="input-row-cont">
                                 <div className="input-container">
-                                    <label htmlFor="start" className="label" >Start year
-                                        <select id="start" className="form-control" value={workHeading.startYear}
+                                    <label htmlFor="start" className="label" >Start year</label>
+                                        <select id="start" className="form-select" value={workHeading.startYear}
                                             onChange={(e) => {
                                                 dispatch(updateWorkEx({
                                                     key: 'startYear',
@@ -134,11 +134,11 @@ function WorkEx(props) {
                                                     )
                                                 })}
                                         </select>
-                                    </label>
+                                    
                                 </div>
                                 <div className="input-container">
-                                    <label htmlFor="end" className="label" >End year
-                                        <select id="end" className="form-control" value={workHeading.endYear}
+                                    <label htmlFor="end" className="label" >End year</label>
+                                        <select id="end" className="form-select" value={workHeading.endYear}
                                             onChange={(e) => {
                                                 dispatch(updateWorkEx({
                                                     key: 'endYear',
@@ -155,13 +155,12 @@ function WorkEx(props) {
                                                 })}
 
                                         </select>
-                                    </label>
+                                    
                                 </div>
                             </div>
                             
                             <div className="input-row-cont">
                             <div className="input-container-text">
-                                <div className='row'>
                                     <div className='label-container'>
                                         <label htmlFor="type" className="label">Summary</label>
                                     </div>
@@ -181,8 +180,6 @@ function WorkEx(props) {
                                             <GTPWorkPopup />
                                         </div>
                                     </div>
-
-                                </div>
                             </div>
                         </div>
 
@@ -192,16 +189,16 @@ function WorkEx(props) {
 
                 )
             })}
-            <div className='d-flex'>
+            <div className='add-remove-container'>
                 <button
-                    className='mt-3 me-5 mb-3 ml-1 p-2'
+                    className=''
                     onClick={AddExperience}
                 >
                     Add new
                 </button>
 
                 <button
-                    className='mt-3 ms-5 mb-3 ml-1 p-2'
+                    className=''
                     onClick={RemoveExperience}
                 >
                     Remove

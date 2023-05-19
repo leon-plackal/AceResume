@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AiOutlineSearch} from 'react-icons/ai'
 
 const FormSection = ({ generateResponse }) => {
     const [newQuestion, setNewQuestion] = useState('');
@@ -13,7 +14,7 @@ const FormSection = ({ generateResponse }) => {
             ></textarea>
             <hr className="hr-line" />
             <button className="search-btn" onClick={() => generateResponse(newQuestion, setNewQuestion)}>
-                Search
+            <AiOutlineSearch/>
             </button>
             
         </div>

@@ -144,8 +144,6 @@ const onChangeHandler = (key, value, index, errorMessage = undefined) => {
     }
 }
 
-  console.log(index["setvalue"])
-  console.log(dataStore.education[index["setvalue"]].Type)
     const editor = useEditor({
         extensions: [
             Color.configure({ types: [TextStyle.name, ListItem.name] }),

@@ -149,8 +149,6 @@ const onChangeHandler = (key, value, index, errorMessage = undefined) => {
     }
 }
 
-  console.log(index["setvalue"])
-  console.log(dataStore.workEx[index["setvalue"]].title)
     const editor = useEditor({
         extensions: [
             Color.configure({ types: [TextStyle.name, ListItem.name] }),

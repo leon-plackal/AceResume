@@ -53,7 +53,7 @@ function MyResume() {
         <div className='container w-100 overflow-scroll'>
         <div  className=' row mt-2 p-5'>
             <div className='w-100 d-flex justify-content-center'>
-                <Link to="/detailsfillingpage/keyskills">
+                <Link to="/build/keyskills">
                     <button className='me-4 p-2'> Go-Back</button>
                 </Link>
                 <button className='btn btn-success ms-3 p-2'onClick={downloadComponentPDF}>

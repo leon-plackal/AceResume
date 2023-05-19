@@ -1,3 +1,7 @@
+textarea {
+    padding: .5rem !important;
+}
+
 .btn-modal {
     display: flex;
     align-items: center;
@@ -8,22 +12,28 @@
     border-radius: 15px;
     animation: pulse 3s linear infinite;
 }
-.openai-button{
+
+.openai-button {
     width: 20px;
 }
+
 @keyframes pulse {
-    0%{ 
+    0% {
         background-color: rgb(95, 86, 219);
     }
-    50%{
+
+    50% {
         background-color: rgb(161, 129, 202);
     }
-    100%{
+
+    100% {
         background-color: rgb(95, 86, 219);
     }
 }
-.gtp-modal{
-    position: absolute; /* right here is what does it */
+
+.gtp-modal {
+    position: absolute;
+    /* right here is what does it */
     color: rgb(0, 0, 0);
     z-index: 10;
     height: 400px;
@@ -31,7 +41,7 @@
     left: 100%;
     top: 50%;
     width: 500px;
-    margin-left: 16px;
+    margin-left: 36px;
     border-radius: 3px;
     background: rgb(255, 255, 255);
     box-shadow: rgba(23, 68, 130, 0.2) 0px 0px 1px, rgba(23, 68, 130, 0.15) 0px 2px 14px;
@@ -43,7 +53,8 @@
     transition: opacity 0.3 ease-in-out;
     transform: translateY(-20%);
 }
-.gtp-modal.fade{
+
+.gtp-modal.fade {
     opacity: 0;
 }
 
@@ -55,8 +66,8 @@
     border-radius: 3px;
     width: 100%;
     height: 100%;
-    -webkit-box-shadow: 1px 5px 8px -1px rgba(0,0,0,0.82); 
-    box-shadow: 1px 5px 8px -1px rgba(0,0,0,0.82);
+    -webkit-box-shadow: 1px 5px 8px -1px rgba(0, 0, 0, 0.82);
+    box-shadow: 1px 5px 8px -1px rgba(0, 0, 0, 0.82);
     z-index: 10;
     overflow: scroll;
 }
@@ -74,13 +85,15 @@
     width: 22px;
     background: #ffffff00;
 }
+
 .close-modal img {
     height: 10px;
 }
 
-.gtp-form{
+.gtp-form {
     padding: 0rem .5rem;
 }
+
 .gtp-form textarea {
     border: none;
     outline: none;
@@ -90,7 +103,8 @@
     background: #ffffff;
     font-size: 12px;
 }
-.search-btn{
+
+.search-btn {
     position: absolute;
     padding: 5px;
     right: 1.5rem;
@@ -98,54 +112,65 @@
     color: #ffffff;
     font-weight: 400;
     font-size: 12px;
-    background:rgb(224, 224, 224);
+    background: rgb(224, 224, 224);
 }
-.clear-btn{
+
+.clear-btn {
     position: fixed;
     padding: 5px;
-    right: 3rem;
+    right: 1.5rem;
     bottom: 1.2rem;
     color: #ffffff;
     font-weight: 400;
     font-size: 12px;
-    background:rgb(224, 224, 224);
+    background: rgb(224, 224, 224);
 }
-.answer-container{
+
+.answer-container {
     padding: 0.5rem;
 }
-.answer,.question{
+
+.answer,
+.question {
     padding: 0.5rem;
     font-size: 12px;
     white-space: pre-wrap;
     -ms-overflow-style: none;
-     scrollbar-width: none;
+    scrollbar-width: none;
     text-align: left;
 }
-.answer{
+
+.answer {
     background-color: rgb(212, 212, 212);
     margin: 0;
     border-radius: 3px;
     position: relative;
 }
-.question{
+
+.question {
     margin: 0;
 }
-.hr-line{
+
+.hr-line {
     margin: 0.5rem;
 }
-.gpt-tag-container{
+
+.gpt-tag-container {
     padding: 0.5rem;
 }
-.gpt-tags{
+
+.gpt-tags {
     display: flex;
     padding: 5px;
     font-size: 12px;
     font-weight: 400;
 }
-button:empty{
+
+button:empty {
     display: none;
 }
-.copy-icon{
+
+.copy-icon {
     cursor: pointer;
     position: absolute;
     height: 20px;
@@ -157,4 +182,52 @@ button:empty{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+@media screen and (max-width: 1700px) {
+    .gtp-modal {
+        height: 260px;
+        width: 300px;
+        left: 10px;
+        top: 90px;
+    }
+    .gtp-form textarea{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .gtp-modal {
+        height: 200px;
+        width: 300px;
+        left: -305px;
+        top: 350px;
+    }
+    .gtp-form textarea{
+        font-size: 9px;
+        height: 3.4rem;
+    }
+    .gtp-form hr{
+        margin: 2px;
+    }
+    .gpt-tag-container{
+        padding: 0 .5rem;
+        font-size: 10px;
+    }
+    .gpt-tag-container button{
+        padding: 3px;
+        font-size: 10px;
+    }
+    .answer, .question{
+        font-size: 10px;
+    }
+    .search-btn{
+        padding: 0 3px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .gtp-modal{
+        display: none;
+    }
 }

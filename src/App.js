@@ -4,7 +4,7 @@ import DetailsFillingPage from './Components/DetailsFillComponents/DetailsFillin
 import Home from './Components/HomePage/Home'
 import NavBar from './Components/Navigation/Navbar'
 import MyResume from './Components/ResumeDisplay/MyResume';
-import AboutUs from './Components/AboutUs/AboutUs';
+import AboutUs from './Components/AboutUs/TemplateSelect';
 import './App.css';
 
 // This component defines routing for other components 
@@ -19,8 +19,8 @@ function App() {
         <div>
             <Routes>
                   <Route exact path="/" element={<Home/>}></Route>
-                  <Route path="/detailsfillingpage/*" element ={<DetailsFillingPage />}></Route> 
-                  <Route path="/myresume" element={<MyResume/>}></Route>
+                  <Route path="/build" element ={<DetailsFillingPage />}></Route> 
+                  <Route path="/preview" element={<MyResume/>}></Route>
                   <Route exact path="/about" element={<AboutUs/>}></Route>
                   <Route path="*" element={<Navigate to="/about" />}></Route>
             </Routes> 

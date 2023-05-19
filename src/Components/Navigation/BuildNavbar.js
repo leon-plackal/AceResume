@@ -11,7 +11,7 @@ function NavBar(){
       
       <div className='nav-right'>
           <Link to='/about' style={{ textDecoration: 'none' , color: 'white'}}>Templates</Link> 
-          <Link to='/myresume' style={{ textDecoration: 'none' , color: 'white'}}>Preview</Link> 
+          <Link to='/preview' style={{ textDecoration: 'none' , color: 'white'}}>Preview</Link> 
           
       </div>
 

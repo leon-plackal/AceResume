@@ -28,7 +28,7 @@ function PersonalInfo(props) {
     }
   }
   return (
-    <div style={{ padding: "4rem", textAlign: "left", }}>
+    <div className='section-container' style={{ padding: "4rem", textAlign: "left", }}>
       <h2>Personal Details</h2>
       <hr />
       <div>
@@ -38,7 +38,6 @@ function PersonalInfo(props) {
         </div>
         <div className="input-row-cont" >
           <div className="input-container">
-            <div className='row '>
               <div className=''>
                 <label htmlFor="firstname" className="label">First Name*</label>
               </div>
@@ -60,11 +59,11 @@ function PersonalInfo(props) {
                   }}
                 />
               </div>
-            </div>
+            
           </div>
 
           <div className="input-container">
-            <div className='row'>
+
               <div className=''>
                 <label htmlFor="lastname" className="label">Last Name</label>
               </div>
@@ -75,11 +74,11 @@ function PersonalInfo(props) {
                 />
               </div>
             </div>
-          </div>
+          
         </div>
         <div className="input-row-cont" >
           <div className="input-container">
-            <div className='row '>
+
               <div className=''>
                 <label htmlFor="staticEmail" className="label">Email*</label>
               </div>
@@ -93,9 +92,8 @@ function PersonalInfo(props) {
                 />
               </div>
             </div>
-          </div>
+          
           <div className="input-container">
-            <div className='row '>
               <div className=''>
                 <label htmlFor="mobile" className="label">Mobile No.*</label>
               </div>
@@ -111,13 +109,11 @@ function PersonalInfo(props) {
                   onChange={(value, errorMessage) => { onChangeHandler('Mobile', value, errorMessage) }}
                 />
               </div>
-            </div>
           </div>
         </div>
 
         <div className="input-row-cont" >
           <div className="input-container">
-            <div className='row '>
               <div className=''>
                 <label htmlFor="inputRole" className="label">Role</label>
               </div>
@@ -127,13 +123,11 @@ function PersonalInfo(props) {
                   onChange={(value) => { onChangeHandler('Role', value) }}
                 />
               </div>
-            </div>
           </div>
           <div className="input-container">
-            <div className='row '>
-              <div className=''>
+
                 <label htmlFor="inputCity" className="label">City</label>
-              </div>
+
               <div className="">
                 <TextField type="text" elementId="inputCity"
                   validation={
@@ -143,13 +137,11 @@ function PersonalInfo(props) {
                   onChange={(value, errorMessage) => { onChangeHandler('City', value, errorMessage) }}
                 />
               </div>
-            </div>
           </div>
         </div>
 
         <div className=" input-row-cont">
           <div className="input-container-text">
-            <div className='row'>
               <div className='label-container'>
                 <label htmlFor="Textarea" className="label">Objective</label>
               </div>
@@ -166,10 +158,6 @@ function PersonalInfo(props) {
                   <GTPPersonalPopup />
                 </div>
               </div>
-
-
-
-            </div>
           </div>
         </div>
       </div>

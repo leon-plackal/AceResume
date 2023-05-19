@@ -15,6 +15,10 @@ export const templateImagesPaths =[
     {
         name:'Template 4',
         imageSource:require('./images/temp4.jpg'),
+    },
+    {
+        name:'Template 4',
+        imageSource:require('./images/temp4.jpg'),
     }
 ]
 
