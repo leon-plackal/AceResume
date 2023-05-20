@@ -3,6 +3,7 @@ import {Routes, Route ,Navigate} from 'react-router-dom';
 import DetailsFillingPage from './Components/DetailsFillComponents/DetailsFillingPage';
 import Home from './Components/HomePage/Home'
 import NavBar from './Components/Navigation/Navbar'
+import Footer from '../src/Components/Navigation/Footer'
 import MyResume from './Components/ResumeDisplay/MyResume';
 import AboutUs from './Components/AboutUs/TemplateSelect';
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
                   <Route path="*" element={<Navigate to="/about" />}></Route>
             </Routes> 
         </div>
+        <Footer/>
     </div>
   )
 }
