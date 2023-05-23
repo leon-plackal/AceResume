@@ -251,11 +251,11 @@ box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.55);
 .home-container {
   margin: auto;
   display: flex;
-  max-width: 40%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
+  padding: 4rem 4rem;
+  width: 60%;
   background-color: var(--clr-lighter);
   color: var(--clr-darker);
 }
@@ -304,6 +304,7 @@ ul.features-list {
 }
 #home-features p{
   font-size: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 /* build nav */
@@ -346,7 +347,7 @@ ul.features-list {
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem 0 3rem;
-  height: 80px;
+  height: 70px;
   position: relative;
   bottom: 0;
   z-index: 100;
@@ -644,6 +645,10 @@ div.content {
 @media screen and (max-width: 1360px) {
   .gtp-btn-container h6{
     display: none;
+  }
+  .home-container{
+  width: 100%;
+
   }
 }
 /* On screens that are less than 1200px, hide the live */

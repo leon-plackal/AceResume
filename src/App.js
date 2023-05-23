@@ -2,10 +2,10 @@ import React from 'react'
 import {Routes, Route ,Navigate} from 'react-router-dom';
 import DetailsFillingPage from './Components/DetailsFillComponents/DetailsFillingPage';
 import Home from './Components/HomePage/Home'
-import NavBar from './Components/Navigation/Navbar'
 import Footer from '../src/Components/Navigation/Footer'
 import MyResume from './Components/ResumeDisplay/MyResume';
 import AboutUs from './Components/AboutUs/TemplateSelect';
+import LoginPage from './Components/HomePage/LoginPage';
 import './App.css';
 
 // This component defines routing for other components 
@@ -22,6 +22,7 @@ function App() {
                   <Route exact path="/" element={<Home/>}></Route>
                   <Route path="/build" element ={<DetailsFillingPage />}></Route> 
                   <Route path="/preview" element={<MyResume/>}></Route>
+                  <Route path="/login" element={<LoginPage/>}></Route>
                   <Route exact path="/about" element={<AboutUs/>}></Route>
                   <Route path="*" element={<Navigate to="/about" />}></Route>
             </Routes> 
