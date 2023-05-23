@@ -65,6 +65,12 @@ button {
   color: white;
   font-size: 1rem;
   font-weight: bold;
+  opacity: 0.95;
+  transition: 0.2s ease-in-out;
+}
+button:hover{
+  box-shadow: 1px 1px 6px 2px rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 body {
@@ -434,19 +440,11 @@ ul.features-list {
   background-color: rgba(50, 50, 50, 0.5);
 }
 
-.resume {
-  margin: 20px;
-  margin-left: 50px;
-}
-
 
 /* Page content.  */
 div.content {
   padding: 1px 16px;
 }
-
-
-
 
 .input-style:focus {
   border: 3px solid rgba(63, 136, 239, 0.4);

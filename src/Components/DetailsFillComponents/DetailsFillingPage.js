@@ -116,13 +116,7 @@ function DetailsFillingPage(props) {
                     : <Template3 />}
           </div>
 
-          <div className='preview-header'>
-            <div className='w-100 d-flex justify-content-center mt-4'>
-              <button className='btn btn-success ms-3 p-2' onClick={downloadComponentPDF}>
-                Save Resume
-              </button>
-            </div>
-          </div>
+          
         </div>
 
 

@@ -39,7 +39,6 @@ function PersonalInfo(props) {
   }
   function RemoveLink() {
     //this function deletes the latest saved details in the skills element, when the user clicks on the remove button.
-    console.log(linkHeads.length)
     if (linkHeads.length > 1){
       dispatch(removeArrayElement({ key: "links" }))
     }

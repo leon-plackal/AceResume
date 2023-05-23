@@ -20,7 +20,6 @@ export default function Modal(index) {
   } else{
     experience = 'mid-level'
   }
-  // console.log(experience, yrsExperience)
 
   function addClass(el,name) {
     el.className += ' '+name;

@@ -8,11 +8,6 @@ import AboutUs from './Components/AboutUs/TemplateSelect';
 import LoginPage from './Components/HomePage/LoginPage';
 import './App.css';
 
-// This component defines routing for other components 
-// Home page displays the different templates from which user can select either of them.
-//'detailsfillingpage' displays the detailsfillingpage inside which there are nested routes to display personalinfo, workexperience, education and keyskills page.
-//'myresume' displays the resume created by the user. 
-//'about' displays the AboutUs page of the app.
 function App() {
   return (
     <div>

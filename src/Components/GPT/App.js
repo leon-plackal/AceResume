@@ -4,15 +4,16 @@ import AnswerSection from './AnswerSection';
 import AiGenerated from './AIgenerated';
 import "./modal.css";
 import { useSelector } from 'react-redux'
-
 import { useState } from 'react';
+
 
 const App = ({ message, index }) => {
 	const configuration = new Configuration({
-		apiKey: "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",
+		apiKey: process.env.REACT_APP_API_KEY,
 	});
 	const openai = new OpenAIApi(configuration);
 	const dataStore = useSelector(state => state.dataStore)
+	const loadingBar = document.querySelector(".gpt-loading-bar");
 	var role = dataStore.personalInfo.Role
 
 	const [storedValues, setStoredValues] = useState([]);
@@ -57,6 +58,7 @@ const App = ({ message, index }) => {
 
 	const generateResponse = async (newQuestion, setNewQuestion) => {
 		var promptvar = newQuestion
+		// loadingBar.style.display = 'block'
 		let options = {
 			model: 'text-davinci-003',
 			temperature: 0,
@@ -105,9 +107,9 @@ const App = ({ message, index }) => {
 			<button className="clear-btn mt-1" onClick={() => clearResponse()}>
 				Clear
 			</button>
-			<button className="clear-btn mt-1" onClick={() => generateJobPoints({index})}>
+			{/* <button className="clear-btn mt-1" onClick={() => generateJobPoints({index})}>
 				Job
-			</button>
+			</button> */}
 
 		</div>
 	);
