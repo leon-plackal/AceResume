@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 
 import { useState } from 'react';
 
-const App = ({ message, workDetails }) => {
+const App = ({ message, index }) => {
 	const configuration = new Configuration({
 		apiKey: "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",
 	});
@@ -23,15 +23,14 @@ const App = ({ message, workDetails }) => {
 		setTags([])
 	};
 
-	const generateAIAnswer = async (workDetails)=>{
-		// some code…
-		
+	const generateJobPoints = async (index)=>{
+
+		const activeJobTitle = dataStore.workEx[index["index"]["index"]].title
 	   }
 
 	const generateTags = async (prompt) => {
 		setTags([])
-		const tg = prompt["message"]
-		// const result = tg.slice(1, -1);
+		const tag = prompt["message"]
 		let options = {
 			model: 'text-davinci-003',
 			temperature: 0,
@@ -39,7 +38,7 @@ const App = ({ message, workDetails }) => {
 			top_p: 1,
 			frequency_penalty: 1.5,
 			presence_penalty: 0.0,
-			prompt: tg,
+			prompt: tag,
 			stop: ['/'],
 		};
 
@@ -105,6 +104,9 @@ const App = ({ message, workDetails }) => {
 			<AiGenerated storedValues={tags} />
 			<button className="clear-btn mt-1" onClick={() => clearResponse()}>
 				Clear
+			</button>
+			<button className="clear-btn mt-1" onClick={() => generateJobPoints({index})}>
+				Job
 			</button>
 
 		</div>

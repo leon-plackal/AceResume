@@ -38,7 +38,7 @@ function Home() {
                     <section id='home-features'>
                         <div>
                             <p>
-                                AceResume uses the power of Open AI's chat gpt and simple yet stylist templates to help make the resume and cover letter building process hassle free. Get high quality answers from Chat GPT, tailored to your job and experience - never run into a blank again when writing! The builder features many free templates and the ability to export your finished product to PDF.
+                                AceResume uses the power of Open AI's Chat GPT and simple yet stylistic templates to help make the resume and cover letter building process hassle free. Get high quality answers from Chat GPT, tailored to your job and experience - never run into a blank again when writing! The builder features many free templates and the ability to export your finished product to PDF.
                                 Stand out from other condidates by using our tool to help your resume building process.
                             </p>
                             <ul>

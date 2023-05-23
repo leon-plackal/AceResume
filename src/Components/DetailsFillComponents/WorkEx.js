@@ -177,7 +177,7 @@ function WorkEx(props) {
 
                                         <div className='gtp-btn-container'>
                                             <h6>Need Help?</h6>
-                                            <GTPWorkPopup />
+                                            <GTPWorkPopup index={index}/>
                                         </div>
                                     </div>
                             </div>

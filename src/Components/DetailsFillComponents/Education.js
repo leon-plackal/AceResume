@@ -117,10 +117,6 @@ function Education(props) {
 
                                     <div className='text-area-container'>
                                         <div className='animate-overflow edu-gtp'></div>
-                                        {/* <TextArea elementId="Textarea"
-                                            value={educationHeading.Type}
-                                            onChange={(value) => { onChangeHandler('Type', value, index) }}
-                                        /> */}
                                         <TiptapEducation
                                         setvalue={index}/>
                                         <div className='gtp-btn-container'>

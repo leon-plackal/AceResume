@@ -5,7 +5,7 @@ import GTP from '../GPT/App'
 import xbutton from '../Data/images/x-symbol.svg'
 import { useSelector } from 'react-redux'
 
-export default function Modal() {
+export default function Modal(index) {
   const [modal, setModal] = useState(false);
   const [showAnim, setshowAnim] = useState(false)
   const workHeader = document.querySelector(".work-gtp");
@@ -57,6 +57,7 @@ export default function Modal() {
           <div onClick={toggleModal}></div>
           <div className="modal-content">
           <GTP message={`write a good resume job experience section for a ${role} with ${experience} experience`}
+          index={index}
           />
             <button className="close-modal" onClick={toggleModal}>
               <img src={xbutton}/>

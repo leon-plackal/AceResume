@@ -5,7 +5,7 @@ import GTP from '../GPT/App'
 import xbutton from '../Data/images/x-symbol.svg'
 import { useSelector } from 'react-redux'
 
-export default function Modal() {
+export default function Modal(index) {
   const [modal, setModal] = useState(false);
   const [showAnim, setshowAnim] = useState(false)
   const eduHeader = document.querySelector(".edu-gtp");
@@ -45,7 +45,7 @@ export default function Modal() {
         <div className="gtp-modal">
           <div onClick={toggleModal}></div>
           <div className="modal-content">
-          <GTP message={"Objective"}/>
+          <GTP message={"Objective"} index={index}/>
             <button className="close-modal" onClick={toggleModal}>
               <img src={xbutton}/>
             </button>

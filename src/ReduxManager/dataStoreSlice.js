@@ -29,7 +29,8 @@ export const dataStoreSlice = createSlice({
                 Start:"",
                 End:""
         }],
-        skills:[{skillName:""}] ,
+        skills:[{skillName:""}],
+        links:[{socialLink:""}],
         selectedTemplate:"Template3",
         imageFile:null,
         errorMessages:{},
@@ -55,6 +56,10 @@ export const dataStoreSlice = createSlice({
     updateKeySkills: (state,action) =>{
       //this function updates the targeted key of the keySkills element of dataStore //
       state.skills[action.payload.index][action.payload.key] = action.payload.value
+    },
+    updateLinks: (state,action) =>{
+      //this function updates the targeted key of the keySkills element of dataStore //
+      state.links[action.payload.index][action.payload.key] = action.payload.value
     },
     updateState: (state,action) =>{
       //this function can be called to update any targeted element of dataStore //
@@ -82,6 +87,6 @@ export const dataStoreSlice = createSlice({
 })
 
 export const { updatePersonalInfo, updateWorkEx,updateEducation,updateKeySkills,
-  updateErrorMessages, updateState,addArrayElement,removeArrayElement, updateSkillsText } = dataStoreSlice.actions
+  updateErrorMessages, updateState,addArrayElement,removeArrayElement, updateSkillsText, updateLinks } = dataStoreSlice.actions
 
 export default dataStoreSlice.reducer
