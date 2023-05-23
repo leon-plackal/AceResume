@@ -12,7 +12,7 @@ function Template4() {
 
             <div className='d-flex justify-content-center'>
                 <div className='' style={{color:"black",fontSize:"25px"}}>{ dataStore.personalInfo.firstName +" "+  dataStore.personalInfo.lastName}</div>
-                <hr/>
+                
             </div>
             <div className='d-flex gap-3 justify-content-center h6 fw-light' >
                 <div className="" style={{color:"black"}}></div>
@@ -20,7 +20,7 @@ function Template4() {
                         </div>
             </div>
             <div>
-                <hr style={{height:"1px",backgroundColor:"#4b6982"}}/> 
+                <hr style={{height:"2px",backgroundColor:"#4b6982", margin:'5px'}}/> 
                 <div className=" justify-content-left d-flex text-lg-center" style={{fontSize:"17px",}}>{parser(dataStore.personalInfo.Objective)}</div>
             </div>
               
@@ -28,9 +28,9 @@ function Template4() {
             <div className='experience'>
                 <div className="">
                 <div className='d-flex justify-content-center'> 
-                    <h3 className='h4 mt-4'>Professional Experience</h3>
+                    <h3 className='h4 mt-1'>Professional Experience</h3>
                 </div>
-                <hr style={{height:"1px",backgroundColor:"#4b6982"}}/> 
+                <hr style={{height:"2px",backgroundColor:"#4b6982",  margin:'5px'}}/> 
 
                 <div className="text-left " style={{fontSize:"18px"}}>
                     {dataStore.workEx.map((item)=>{
@@ -59,7 +59,7 @@ function Template4() {
                     <div className='d-flex justify-content-center'> 
                         <h3 className='h4 mt-1'>Education</h3>
                     </div>
-                    <hr style={{height:"1px",backgroundColor:"#4b6982"}}/> 
+                    <hr style={{height:"2px",backgroundColor:"#4b6982",  margin:'5px'}}/> 
                     <div className=" text-left" >
                         
                         <div style={{fontSize:"18px"}}>
@@ -82,10 +82,10 @@ function Template4() {
 
                 <div id='skills'>
                     <div className='d-flex justify-content-center'> 
-                        <h3 className='h4 mt-4'>Skills</h3>
+                        <h3 className='h4 mt-1'>Skills</h3>
                     </div>
-                    <hr style={{height:"1px",backgroundColor:"#4b6982"}}/>
-                    <div className=" text-left d-flex flex-lg-row gap-2" style={{fontSize:"18px"}}>
+                    <hr style={{height:"2px",backgroundColor:"#4b6982",  margin:'5px'}}/>
+                    <div className="d-flex flex-row gap-2" style={{fontSize:"14px"}}>
                             {dataStore.skills.map((skill)=>{
                                 return(
                                         <div key={shortid.generate()}>{skill.skillName}</div>

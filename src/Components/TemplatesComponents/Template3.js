@@ -68,7 +68,7 @@ function Template4() {
 
                     <div className='d-grid gap-3 mb-4' style={{ gridTemplateColumns: '20% 80%' }}>
                     <div><h6>Skills</h6></div>
-                    <div className="text-left d-flex flex-lg-row gap-2" style={{fontWeight: '400',fontSize: "16px" }}>
+                    <div className="text-left d-flex flex-row gap-2" style={{fontWeight: '400',fontSize: "14px", flexWrap:'wrap' }}>
                         {dataStore.skills.map((skill) => {
                             return (
                                 <div key={shortid.generate()}>{skill.skillName}</div>

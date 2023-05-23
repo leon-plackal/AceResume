@@ -1,7 +1,7 @@
 export const templateImagesPaths =[
     //this object contains the paths of the static template images that will be used to display template images in the Home page.
     {
-        name:'Software Engineer',
+        name:'Template 1',
         imageSource:require('./images/temp1.jpg'),
     },
     {
@@ -16,10 +16,7 @@ export const templateImagesPaths =[
         name:'Template 4',
         imageSource:require('./images/temp4.jpg'),
     },
-    {
-        name:'Template 4',
-        imageSource:require('./images/temp4.jpg'),
-    }
+
 ]
 
 export const stateNames =['Western Australia', 'Victoria', 'Queensland', 'NSW', 'Tasmania', 'Northern Territory', 'ACT','South Australia'

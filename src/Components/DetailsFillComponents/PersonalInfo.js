@@ -39,7 +39,10 @@ function PersonalInfo(props) {
   }
   function RemoveLink() {
     //this function deletes the latest saved details in the skills element, when the user clicks on the remove button.
-    dispatch(removeArrayElement({ key: "links" }))
+    console.log(linkHeads.length)
+    if (linkHeads.length > 1){
+      dispatch(removeArrayElement({ key: "links" }))
+    }
   }
   return (
     <div className='section-container' style={{ padding: "4rem", textAlign: "left", }}>
@@ -157,9 +160,9 @@ function PersonalInfo(props) {
         {linkHeads.map((item, index) => {
           return (
             <div key={index} className=''>
-              <div className='input-row-cont dflex' style={{ justifyContent: 'left' }}>
+              <div className='input-row-cont dflex' style={{ justifyContent: 'left', alignItems: 'center', gap: '1rem' }}>
                 <div className='input-container' >
-                  
+
                   <TextField type="text" value={item.socialLink}
                     onChange={(value) => {
                       dispatch(updateLinks({
@@ -170,26 +173,27 @@ function PersonalInfo(props) {
                     }}
                   />
                 </div>
+                <button className='d-flex p-0' style={{ height: '25px', width: '25px', justifyContent: 'center', alignItems: 'center' }}
+                  onClick={AddLink}>
+                  +
+                </button>
+                <button className='d-flex p-0' style={{ height: '25px', width: '25px', justifyContent: 'center', alignItems: 'center' }}
+                  onClick={RemoveLink}>
+                  -
+                </button>
               </div>
             </div>
-            
+
           )
         })}
-<div className='add-remove-container'>
-        <div className=''>
-          <button className='p-2'
-            onClick={AddLink}>
-            Add-Skill
+        <div className='add-remove-container'>
+          <div className=''>
 
-          </button>
+          </div>
+          <div className=''>
+
+          </div>
         </div>
-        <div className=''>
-          <button className='p-2'
-            onClick={RemoveLink}>
-            Remove
-          </button>
-        </div>
-      </div>
         <div className=" input-row-cont mt-5">
           <div className="input-container-text">
             <div className='label-container'>

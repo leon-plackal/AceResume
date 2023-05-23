@@ -8,7 +8,7 @@ const shortid = require('shortid')
 function Template2() {
     const dataStore = useSelector(state => state.dataStore)
     return (
-        <div className='template-global' style={{ fontFamily: 'Rubik', fontWeight: '400' }}>
+        <div className='template-global' style={{ fontFamily: 'Roboto', fontWeight: '400' }}>
             <div className='template-g-bg' style={{ background: '', padding: '2.5rem' }}>
 
                 <div className='d-grid gap-3 mb-2 h-100' style={{ gridTemplateColumns: '20% 80%' }}>
@@ -25,9 +25,9 @@ function Template2() {
                         <div className='d-flex gap-1 flex-column'>
                             <h6 style={{ fontSize: '16px', color: '#168bbd' }}>Links:</h6>
                             <div className="text-left d-flex flex-column gap-0" style={{ fontWeight: '400', fontSize: "12px", wordBreak: 'break-all' }}>
-                                {dataStore.links.map((skill) => {
+                                {dataStore.links.map((link) => {
                                     return (
-                                        <div key={shortid.generate()}>{skill.socialLink}</div>
+                                        <div key={shortid.generate()}>{link.socialLink}</div>
                                     )
                                 })
                                 }
