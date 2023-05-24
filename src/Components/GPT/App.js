@@ -13,7 +13,6 @@ const App = ({ message, index }) => {
 	});
 	const openai = new OpenAIApi(configuration);
 	const dataStore = useSelector(state => state.dataStore)
-	const loadingBar = document.querySelector(".gpt-loading-bar");
 	var role = dataStore.personalInfo.Role
 
 	const [storedValues, setStoredValues] = useState([]);
@@ -55,10 +54,18 @@ const App = ({ message, index }) => {
 		}
 		
 	}
+	const toggleLoading = (state) => {
+		var loadingBar = document.getElementById("gpt-loading-bar");
+		if (state === true) {
+			loadingBar.style.visibility = 'visible'
+		} else {
+			loadingBar.style.visibility = 'hidden'
+		}
+	}
 
 	const generateResponse = async (newQuestion, setNewQuestion) => {
 		var promptvar = newQuestion
-		// loadingBar.style.display = 'block'
+		toggleLoading(true)
 		let options = {
 			model: 'text-davinci-003',
 			temperature: 0,
@@ -90,6 +97,8 @@ const App = ({ message, index }) => {
 			]);
 			setNewQuestion('');
 		}
+		toggleLoading(false)
+
 	};
 
 	return (

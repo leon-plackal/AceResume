@@ -109,7 +109,7 @@ textarea {
     width: 20px;
     display: flex;
     align-items: center;
-    top: 2.5rem;
+    top: 2.2rem;
     color: #ffffff;
     font-weight: 400;
     font-size: 12px;
@@ -156,7 +156,7 @@ textarea {
     padding: 0.5rem;
 }
 
-.gpt-loading-bar {
+#gpt-loading-bar {
     overflow: hidden;
     position: relative;
     content: '';
@@ -164,9 +164,9 @@ textarea {
     height: 5px;
     background: #0eb1de92;
     animation: loadingBar 3s linear infinite;
-    top: 65px;
+    top: -5px;
     z-index: 2;
-    display: none;
+    visibility: hidden;
 }
 
 @keyframes loadingBar {

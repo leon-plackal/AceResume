@@ -172,7 +172,7 @@ const onChangeHandler = (key, value, index, errorMessage = undefined) => {
     })
 
     return (
-        <div>
+        <div id='tt-work'>
             <MenuBar editor={editor} />
             <EditorContent editor={editor} className='tt-editor'/>
         </div>

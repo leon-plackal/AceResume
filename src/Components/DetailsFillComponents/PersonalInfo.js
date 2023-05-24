@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import ProfilePicUploadComponent from './ProfileUpload'
 import TextField from '../InputComponents/TextField'
 import { updatePersonalInfo, updateErrorMessages, updateLinks, addArrayElement, removeArrayElement } from '../../ReduxManager/dataStoreSlice'
 import GTPPersonalPopup from '../GPT/objectiveModal'
 import TipTapPersonal from '../InputComponents/TiptapPersonal'
-
+import { AiOutlineInfoCircle } from 'react-icons/ai'
 //this component renders Personal Info page inside the details filling page.
 function PersonalInfo(props) {
   const personalHeads = useSelector(state => state.dataStore.personalInfo) //this state is used to store personalInfo object of dataStoreSlice.
   const linkHeads = useSelector(state => state.dataStore.links) // this state stores the skills of dataStoreSlice.
   const dispatch = useDispatch();
+  const [showInfo, setShowInfo] = useState(false)
 
   const onChangeHandler = (key, value, errorMessage = undefined) => {
     //this function is called each time when the user provides input to the targeted'TextField'
@@ -39,9 +40,19 @@ function PersonalInfo(props) {
   }
   function RemoveLink() {
     //this function deletes the latest saved details in the skills element, when the user clicks on the remove button.
-    if (linkHeads.length > 1){
+    if (linkHeads.length > 1) {
       dispatch(removeArrayElement({ key: "links" }))
     }
+  }
+
+  const showTip = async() => {
+    const infoBox = document.getElementById("objective-infotext");
+    if (showInfo) {
+      infoBox.style.visibility = 'hidden'
+    } else {
+      infoBox.style.visibility = 'visible'
+    }
+    setShowInfo(!showInfo)
   }
   return (
     <div className='section-container' style={{ padding: "4rem", textAlign: "left", }}>
@@ -209,9 +220,16 @@ function PersonalInfo(props) {
                 <h6>Need Help?</h6>
                 <GTPPersonalPopup />
               </div>
+              <button className='info-btn' onClick={showTip}>
+                <AiOutlineInfoCircle />
+              </button>
+
             </div>
           </div>
         </div>
+      </div>
+      <div id='objective-infotext'>
+        A good resume summary section should be concise and highlight your most relevant skills, experience, and accomplishments. It should also include a few key words that are related to the job you are applying for. Additionally, it should be tailored to the specific job you are applying for and demonstrate why you are the best candidate for the position.
       </div>
     </div>
   )
