@@ -125,7 +125,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -156,8 +156,12 @@ body {
 .add-remove-container button {
   padding: 0.5rem;
 }
-
-#divToPrint {
+.links-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+#divToShow {
   background-color: #ffffff;
   position: absolute;
   transform: scale(0.71);
@@ -653,10 +657,24 @@ div.content {
 .gtp-btn-container h6 {
   margin: 0;
 }
+.export-info{
+  font-size: 14px;
+  background-color: #556698;
+  color: var(--clr-light);
+  height: 400px;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 3px;
+  position: relative;
+  top: 60px;
+}
+.export-info p{
+  font-size: 12px;
+}
 
 /* On screens that are less than 1700px, decrease width of preview */
 @media screen and (max-width: 1700px) {
-  #divToPrint {
+  #divToShow {
     scale: 0.8;
     top: -200px;
   }
@@ -665,6 +683,9 @@ div.content {
   }
   .preview-container{
     width: 40%;
+  }
+  .export-info{
+    scale: 0.8;
   }
 }
 /* hide need help text */
@@ -686,6 +707,9 @@ div.content {
     width: 0%;
     visibility: hidden;
   }
+  .export-info{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -698,6 +722,9 @@ div.content {
   .add-remove-container button{
     font-size: 12px;
   }
+  .links-cont{
+    align-items: normal !important;
+  }
 }
 @media screen and (max-width: 900px) {
   .section-container{
@@ -707,5 +734,69 @@ div.content {
     width: 70vw;
     overflow: hidden;
   }
+  #divToPrint{
+    scale: 0.4;
+    translate: 0px -100px;
+  }
+  .printdivcont{
+    height: 700px;
+  }
 
+}
+@media screen and (max-width: 900px) {
+  .footer{
+    justify-content: center
+  }
+  .footer-left{
+    display: none;
+  }
+  .footer-right{
+    gap: 1rem;
+  }
+  .footer-right h4{
+    font-size: 14px;
+  }
+  .nav-left{
+    display: none;
+  }
+  .build-nav{
+    justify-content: center;
+  }
+  .nav-right{
+    font-size: 16px;
+  }
+  .templates-container{
+    padding: 1rem;
+  }
+  .title-message{
+    max-width: 90%;
+  }
+  .templates-grid{
+    flex-direction: column;
+  }
+  .template-grid{
+    width: 100%;
+  }
+  .home-container{
+    padding: 1rem;
+  }
+  .home-container p{
+    text-align: center;
+  }
+  #home-header{
+    padding: 2rem;
+    padding-top: 8rem;
+  }
+  #home-header h1{
+    text-align: center;
+  }
+  .pfp-link{
+    width: 60%;
+  }
+  .links-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-self: flex-start;
+  }
 }

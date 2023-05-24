@@ -11,7 +11,7 @@ function App() {
         //which will be reflected in personalInfo as the profile image.
         let file = e.target.files[0]
         const  fileType = file['type'];
-        const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+        const validImageTypes = ['image/jpeg', 'image/png'];
         if (validImageTypes.includes(fileType)) {
             let temp=URL.createObjectURL(file)
 
@@ -31,7 +31,7 @@ function App() {
                 <img src={imageFile} alt='Image'/>
             </div>
             <div className="pfp-link">
-                <input type="file" onChange={handleChange} />
+                <input type="file" onChange={handleChange} title="hi" />
             </div>
             
   

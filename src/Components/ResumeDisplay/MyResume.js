@@ -62,7 +62,7 @@ function MyResume() {
                         </button>
                     </div>
                 </div>
-                <div className=' w-100  d-flex justify-content-center align-content-center'>
+                <div className=' w-100  d-flex justify-content-center align-content-center flex-row printdivcont'>
 
                     <div id='divToPrint' style={{ transform: 'scale(0.9)', position: 'relative', top: '0px' }} >
                         {selectedTemplate === ""
@@ -76,7 +76,14 @@ function MyResume() {
                                         : <Template4 />}
                     </div>
 
-
+                    <div className='export-info'>
+                        <h6>Tips:</h6>
+                        <p>Remember, the more concise the better. </p>
+                        <p>One page resumes are quite mainstream and will retain the employers attention better than many pages of filler information</p>
+                        <p>Avoiding spelling mistakes is vital in your resume's integrity!</p>
+                        <p>Make sure you remember to list your responsibilities and competence in specific tasks in your work experience</p>
+                        <p>Avoid over-using filler words like “that,” “the,” “a,” “an,” or “like.”</p>
+                    </div>
                 </div>
 
 

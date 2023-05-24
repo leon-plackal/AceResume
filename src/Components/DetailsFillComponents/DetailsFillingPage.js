@@ -102,7 +102,7 @@ function DetailsFillingPage(props) {
         </div>
 
         <div className='preview-container'>
-          <div id='divToPrint' >
+          <div id='divToShow' >
             {/* In this div, user selected template is rendered alongwith the details filled by the user. */}
             {selectedTemplate === ""
               ? <Template4 />

@@ -170,7 +170,7 @@ function PersonalInfo(props) {
         {linkHeads.map((item, index) => {
           return (
             <div key={index} className=''>
-              <div className='input-row-cont dflex' style={{ justifyContent: 'left', alignItems: 'center', gap: '1rem' }}>
+              <div className='input-row-cont dflex links-cont' style={{ justifyContent: 'left', alignItems: 'center', gap: '1rem' }}>
                 <div className='input-container' >
 
                   <TextField type="text" value={item.socialLink}
@@ -183,6 +183,7 @@ function PersonalInfo(props) {
                     }}
                   />
                 </div>
+                <div className='links-btn'>
                 <button className='d-flex p-0' style={{ height: '25px', width: '25px', justifyContent: 'center', alignItems: 'center' }}
                   onClick={AddLink}>
                   +
@@ -191,6 +192,7 @@ function PersonalInfo(props) {
                   onClick={RemoveLink}>
                   -
                 </button>
+                </div>
               </div>
             </div>
 
