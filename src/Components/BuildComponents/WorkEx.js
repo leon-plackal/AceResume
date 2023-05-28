@@ -80,10 +80,10 @@ function WorkEx(props) {
     // update word count in textarea every 2 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            var editor = document.getElementById('tt-work').children.item(1)
-            var e2 = editor.children
+            const editor = document.getElementById('tt-work').children.item(1)
+            const e2 = editor.children
             for (var i = 0; i < e2.length; i++) {
-            var ptag = e2[i];
+            const ptag = e2[i];
             console.log(ptag.innerText)
             setwordCount(ptag.innerText.length)
         }

@@ -13,20 +13,20 @@ const App = ({ message, index }) => {
 	});
 	const openai = new OpenAIApi(configuration);
 	const dataStore = useSelector(state => state.dataStore)
-	var role = dataStore.personalInfo.Role
+	const role = dataStore.personalInfo.Role
 
 	const [storedValues, setStoredValues] = useState([]);
 	const [tags, setTags] = useState([]);
-	const [expRec, setExpRec] = useState([])
+	// const [expRec, setExpRec] = useState([])
 	const clearResponse = () => {
 		setStoredValues([])
 		setTags([])
 	};
 
-	const generateJobPoints = async (index)=>{
+	// const generateJobPoints = async (index)=>{
 
-		const activeJobTitle = dataStore.workEx[index["index"]["index"]].title
-	   }
+	// 	const activeJobTitle = dataStore.workEx[index["index"]["index"]].title
+	//    }
 
 	const generateTags = async (prompt) => {
 		setTags([])
@@ -55,7 +55,7 @@ const App = ({ message, index }) => {
 		
 	}
 	const toggleLoading = (state) => {
-		var loadingBar = document.getElementById("gpt-loading-bar");
+		const loadingBar = document.getElementById("gpt-loading-bar");
 		if (state === true) {
 			loadingBar.style.visibility = 'visible'
 		} else {

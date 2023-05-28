@@ -5,7 +5,7 @@ import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import React from 'react'
 import { FaBold, FaItalic, FaListOl, FaListUl, FaRedo, FaStrikethrough, FaUndo } from 'react-icons/fa'
-import { updatePersonalInfo, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
+import { updatePersonalInfo } from '../../ReduxManager/dataStoreSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
 const MenuBar = ({ editor }) => {
@@ -130,20 +130,13 @@ const TipTap = () => {
     const personalHeads = useSelector(state => state.dataStore.personalInfo)
     const dispatch = useDispatch();
 
-    const onChangeHandler = (key, value, errorMessage = undefined) => {
+    const onChangeHandler = (key, value = undefined) => {
         //this function is called each time when the user provides input to the targeted'TextField'
         dispatch(updatePersonalInfo({
             //this function updates the targeted key of the personalInfo element of dataStore in dataStoreSlice.js //
             key: key,
             value: value
         }))
-        if (errorMessage !== undefined) {
-            dispatch(updateErrorMessages({
-                // this function is called each time when there is a validatin check applied on the 'TextField' component and it inserts án object {key: errorMessage} into the errorMessages of dataStoreSlice.
-                key: key,
-                value: errorMessage
-            }))
-        }
     }
     const editor = useEditor({
         extensions: [

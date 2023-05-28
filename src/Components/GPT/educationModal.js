@@ -3,14 +3,11 @@ import "./modal.css";
 import logo from '../Data/images/openai-svg.svg'
 import GTP from '../GPT/App'
 import xbutton from '../Data/images/x-symbol.svg'
-import { useSelector } from 'react-redux'
 
 export default function Modal(index) {
   const [modal, setModal] = useState(false);
   const [showAnim, setshowAnim] = useState(false)
   const eduHeader = document.querySelector(".edu-gtp");
-  const dataStore = useSelector(state => state.dataStore)
-  var role = dataStore.personalInfo.Role
 
   function addClass(el,name) {
     el.className += ' '+name;
@@ -47,7 +44,7 @@ export default function Modal(index) {
           <div className="modal-content">
           <GTP message={"Objective"} index={index}/>
             <button className="close-modal" onClick={toggleModal}>
-              <img src={xbutton}/>
+              <img src={xbutton} alt="Close"/>
             </button>
           </div>
         </div>

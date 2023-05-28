@@ -10,7 +10,7 @@ export default function Modal() {
   const [showAnim, setshowAnim] = useState(false)
   const objectiveHeader = document.querySelector(".pers-gtp");
   const dataStore = useSelector(state => state.dataStore)
-  var role = dataStore.personalInfo.Role
+  const role = dataStore.personalInfo.Role
 
   function addClass(el,name) {
     el.className += ' '+name;
@@ -39,7 +39,7 @@ export default function Modal() {
   return (
     <>
       <button onClick={toggleModal} className="btn-modal">
-       <img className="openai-button" src={logo} alt=""/>
+       <img className="openai-button" src={logo} alt="OpenAI"/>
       </button>
 
       {modal && (
@@ -48,7 +48,7 @@ export default function Modal() {
           <div className="modal-content">
           <GTP message={`write a good resume summary for a ${role}`}/>
             <button className="close-modal" onClick={toggleModal}>
-              <img src={xbutton}/>
+              <img src={xbutton} alt="Close"/>
             </button>
             
           </div>

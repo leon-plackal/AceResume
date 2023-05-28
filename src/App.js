@@ -1,21 +1,20 @@
 import React from 'react'
 import {Routes, Route ,Navigate} from 'react-router-dom';
-import DetailsFillingPage from './Components/DetailsFillComponents/DetailsFillingPage';
+import BuildPage from './Components/BuildComponents/BuildPage';
 import Home from './Components/HomePage/Home'
 import Footer from '../src/Components/Navigation/Footer'
 import MyResume from './Components/ResumeDisplay/MyResume';
-import AboutUs from './Components/AboutUs/TemplateSelect';
+import AboutUs from './Components/Navigation/TemplateSelect';
 import LoginPage from './Components/HomePage/LoginPage';
 import './App.css';
 
 function App() {
   return (
-    <div>
-        
+    <div>   
         <div>
             <Routes>
                   <Route exact path="/" element={<Home/>}></Route>
-                  <Route path="/build" element ={<DetailsFillingPage />}></Route> 
+                  <Route path="/build" element ={<BuildPage />}></Route> 
                   <Route path="/preview" element={<MyResume/>}></Route>
                   <Route path="/login" element={<LoginPage/>}></Route>
                   <Route exact path="/about" element={<AboutUs/>}></Route>
@@ -26,7 +25,6 @@ function App() {
     </div>
   )
 }
-
 
 export default App
 

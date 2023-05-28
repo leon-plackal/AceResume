@@ -4,8 +4,8 @@ import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import React from 'react'
-import { FaBold, FaItalic, FaListOl, FaListUl, FaRedo, FaStrikethrough, FaUndo } from 'react-icons/fa'
-import { updateEducation, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
+import { FaBold, FaItalic, FaListUl, FaRedo, FaStrikethrough, FaUndo } from 'react-icons/fa'
+import { updateEducation } from '../../ReduxManager/dataStoreSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
 const MenuBar = ({ editor }) => {
@@ -126,7 +126,7 @@ const TipTap = (index) => {
   const dispatch = useDispatch();
 
 //onchange 
-const onChangeHandler = (key, value, index, errorMessage = undefined) => {
+const onChangeHandler = (key, value, index = undefined) => {
     //this function is called each time when the user provides input to the targeted'TextField'
     dispatch(updateEducation({
         //this function updates the targeted key of the workEx element of dataStore in dataStoreSlice.js //
@@ -134,14 +134,6 @@ const onChangeHandler = (key, value, index, errorMessage = undefined) => {
         value: value,
         index: index,
     }))
-    if (errorMessage !== undefined) {
-        dispatch(updateErrorMessages({
-            // this function is called each time when there is a validatin check applied on the 'TextField' component and it inserts án object {key: errorMessage} into the errorMessages of dataStoreSlice.
-            key: key,
-            value: errorMessage,
-            index: index
-        }))
-    }
 }
 
     const editor = useEditor({
