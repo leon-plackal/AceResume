@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import jsPDF from 'jspdf'
@@ -7,20 +7,15 @@ import Template2 from '../TemplatesComponents/Template2'
 import Template3 from '../TemplatesComponents/Template3'
 import Template4 from '../TemplatesComponents/Template4'
 import html2canvas from 'html2canvas'
-import SuccessMessage from './Modal'
-import { Translate } from 'react-bootstrap-icons'
 import NavBar from '../Navigation/Navbar'
 
 function MyResume() {
-    //this component shows the preview of the resume created by the user with the 'Save'and 'Back' button//
     const selectedTemplate = useSelector(state => state.dataStore.selectedTemplate)
-    const [showModal, setShowModal] = useState(false)
     const downloadComponentPDF = () => {
 
-        // this function is called when the user clicks on the 'Save Resume' button.
         const input = document.getElementById('divToPrint');
-
-        html2canvas(input, { scrollY: -window.scrollY })
+        window.devicePixelRatio = 2.5;
+        html2canvas(input, { scrollY: -window.scrollY})
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF("p", "px", "a4");
@@ -30,20 +25,6 @@ function MyResume() {
                 pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
                 pdf.save("resume.pdf");
             })
-            .then(() => {
-                setTimeout(
-                    // this function shows the modal popup named 'SuccessMessage' after the resume has been successfully downloaded and make it to disappear on its own after 6000 ms//
-                    () => {
-                        setShowModal(true)
-                        setTimeout(
-                            () => {
-                                setShowModal(false)
-                            }
-                            , 6000)
-                    }
-                    , 100)
-            })
-            ;
     }
 
     return (
@@ -85,12 +66,6 @@ function MyResume() {
                         <p>Avoid over-using filler words like “that,” “the,” “a,” “an,” or “like.”</p>
                     </div>
                 </div>
-
-
-                {/* this SuccessMessage component displays modal popup on the screen with the message 'Your resume has been successfully downloaded'. */}
-                <div><SuccessMessage showModal={showModal} setShowModal={setShowModal} /></div>
-
-
             </div>
         </div>
 

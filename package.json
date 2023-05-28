@@ -20,7 +20,6 @@
     "bootstrap-icons": "^1.9.1",
     "cors": "^2.8.5",
     "html-react-parser": "^3.0.16",
-    "html-to-pdfmake": "^2.4.20",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",
     "openai": "^3.2.1",

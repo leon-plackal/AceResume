@@ -9,9 +9,9 @@ function Template2() {
     const dataStore = useSelector(state => state.dataStore)
     return (
         <div className='template-global' style={{ fontFamily: 'Rubik', fontWeight: '400' }}>
-            <div className=' w-100 position-relative' style={{ height: '15%' }}>
-                <img className=" position-absolute" src={dataStore.imageFile} alt=''
-                    style={{ height: "100%", width: '100%', padding: 0, objectFit: 'cover', zIndex: '-1', opacity: '0.8' }} />
+            <div className=' w-100 position-relative' style={{ height: '15%', overflow:'hidden'}}>
+                <img className="position-absolute" src={dataStore.imageFile} alt=''
+                    style={{ display:'flex', alignItems:'center', width: '100%',height:'auto', padding: 0, zIndex: '-1', opacity: '0.8', translate:'0 -200px' }} />
                 <div className='d-flex justify-content-between align-items-center gap-3 w-100' style={{padding:'2.8rem'}} >
                     <div className=' d-flex flex-column ps-4' style={{ textTransform: 'uppercase', fontWeight: '500', fontSize: '30px', }}>
                         <div style={{ textTransform: 'uppercase', fontWeight: '500', fontSize: '30px', lineHeight:'30px'}}>{dataStore.personalInfo.firstName}</div>

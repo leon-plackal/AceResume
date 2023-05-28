@@ -1,5 +1,4 @@
 import React from 'react'
-import { FileEarmarkTextFill } from 'react-bootstrap-icons'
 import { Link } from 'react-router-dom'
 
 function NavBar() {

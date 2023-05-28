@@ -6,11 +6,13 @@ Features:
 - Autofilling preview
 - Export to PDF
 - Chat GPT Autofill recommendations
+- Tips, word count recommendations
 
 What I am lookin to add:
-- Smart Resume AI tools like resume score and ideal description lengths
+- Smart Resume AI tools like resume score
 - Color picker
 - User accounts to save their resumes
+- Export to WordDocx
 
 This app is yet to be deployed, however it will be soon!
 :)

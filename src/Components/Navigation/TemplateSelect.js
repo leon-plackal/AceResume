@@ -1,6 +1,5 @@
 import React from 'react'
 import BuildNavBar from '../Navigation/BuildNavbar'
-// import {Whatsapp,Facebook,Envelope, Instagram} from 'react-bootstrap-icons'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { templateImagesPaths } from '../Data/Data'//templateImagesPaths is imported from Data.js which is used to display static images of various templates on the Home page.
