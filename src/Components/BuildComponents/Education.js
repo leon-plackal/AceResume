@@ -63,12 +63,12 @@ function Education(props) {
     function yearRange(start, end) {
         //this function  is used to create list of years in a range to display list of options in the 'Select' input field of the form.
         var ans = [];
-        for (let i = start; i <= end; i++) {
+        for (let i = end; i >= start; i--) {
             ans.push(i);
         }
         return ans;
     }
-    let year = yearRange(2000, 2023)
+    let year = yearRange(1960, 2023)
     return (
         <div className='section-container' style={{ padding: "4rem", textAlign: "left", }}>
             <h2>Education details</h2>

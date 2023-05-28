@@ -70,12 +70,12 @@ function WorkEx(props) {
     function yearRange(start, end) {
         //this function  is used to create list of years in a range to display list of options in the 'Select' input field of the form.
         var ans = [];
-        for (let i = start; i <= end; i++) {
+        for (let i = end; i >= start; i--) {
             ans.push(i);
         }
         return ans;
     }
-    let year = yearRange(2000, 2023)
+    let year = yearRange(1960, 2023)
 
     // update word count in textarea every 2 seconds
     useEffect(() => {
@@ -84,7 +84,6 @@ function WorkEx(props) {
             const e2 = editor.children
             for (var i = 0; i < e2.length; i++) {
             const ptag = e2[i];
-            console.log(ptag.innerText)
             setwordCount(ptag.innerText.length)
         }
         }, 1000);

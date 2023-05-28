@@ -130,7 +130,9 @@ textarea {
 .answer-container {
     padding: 0.5rem;
 }
-
+.answer-section{
+    margin-bottom: 10px;
+}
 .answer,
 .question {
     padding: 0.5rem;
@@ -154,6 +156,13 @@ textarea {
 
 .gpt-tag-container {
     padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.gpt-tag-container-rt{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 #gpt-loading-bar {

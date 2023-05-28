@@ -17,9 +17,9 @@ function Footer(){
                     </div>
                     
                     <div className='footer-right'>
-                        <Link to='/about' style={{ textDecoration: 'none' , color: 'white'}}> <h4>Templates</h4> </Link>
-                        <Link to='/' style={{ textDecoration: 'none' , color: 'white'}}><h4>Home</h4> </Link>
-                        <Link to='/build' style={{ textDecoration: 'none' , color: 'white'}}><h4>Create</h4></Link>
+                        <Link to='/about' style={{ textDecoration: 'none' , color: 'white'}}> <h4>TEMPLATES</h4> </Link>
+                        <Link to='/' style={{ textDecoration: 'none' , color: 'white'}}><h4>HOME</h4> </Link>
+                        <Link to='/build' style={{ textDecoration: 'none' , color: 'white'}}><h4>CREATE</h4></Link>
                     </div>
               
         </div>

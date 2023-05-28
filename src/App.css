@@ -338,6 +338,9 @@ ul.features-list {
 .nav-left {
   float: left;
 }
+.nav-left img{
+  height: 50px;
+}
 
 .nav-right {
   display: flex;
@@ -345,7 +348,11 @@ ul.features-list {
   position: relative;
   right: 0;
   gap: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+}
+.nav-right a:hover{
+  color: var(--clr-light2) !important;
+  transition: 0.1s ease-in-out;
 }
 
 .nav-right button {
@@ -385,6 +392,7 @@ ul.features-list {
 .footer-right h4{
   margin: 0;
   color: var(--clr-dark);
+  font-size: 1rem;
 }
 /* builder */
 .details-container {

@@ -10,8 +10,10 @@ export default function Modal(index) {
   const [showAnim, setshowAnim] = useState(false)
   const workHeader = document.querySelector(".work-gtp");
   const dataStore = useSelector(state => state.dataStore)
-  var role = dataStore.workEx[0].title
-  var yrsExperience = dataStore.workEx[0].endYear - dataStore.workEx[0].startYear
+
+  const currentIndex = index["index"]
+  var role = dataStore.workEx[currentIndex].title
+  var yrsExperience = dataStore.workEx[currentIndex].endYear - dataStore.workEx[currentIndex].startYear
   let experience = 'mid-level'
   if (yrsExperience > 5){
     experience = 'senior'
