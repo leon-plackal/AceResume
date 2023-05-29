@@ -17,15 +17,15 @@ const App = ({ message }) => {
 
 	// Retrieve 3 latest jobs from datastore,
 	let job1 = ''
-	if (dataStore.workEx[0]){
+	if (dataStore.workEx[0]) {
 		job1 = dataStore.workEx[0].title
 	}
 	let job2 = ''
-	if (dataStore.workEx[1]){
+	if (dataStore.workEx[1]) {
 		job2 = dataStore.workEx[1].title
 	}
 	let job3 = ''
-	if (dataStore.workEx[2]){
+	if (dataStore.workEx[2]) {
 		job3 = dataStore.workEx[2].title
 	}
 
@@ -95,7 +95,7 @@ const App = ({ message }) => {
 				...storedValues,
 			]);
 			setNewQuestion('')
-		} 
+		}
 		else {
 			var completeOptions = {
 				...options,
@@ -124,9 +124,11 @@ const App = ({ message }) => {
 				<FormSection generateResponse={generateResponse} />
 			</div>
 			<div className='gpt-tag-container'>
-				<button className="gpt-tags" onClick={() => generateTags({ message })}>
-					{role}
-				</button>
+				<div className='gpt-tag-container-lt'>
+					<button className="gpt-tags" onClick={() => generateTags({ message })}>
+						{role}
+					</button>
+				</div>
 				<div className='gpt-tag-container-rt'>
 					<button className="gpt-tags" onClick={() => generateTags({ message })}>
 						{job1}

@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from '../Navigation/Navbar'
+import img1 from '../Data/images/home1.jpg'
+import img2 from '../Data/images/home2.jpg'
+import img3 from '../Data/images/home3.jpg'
+
 //this Home component is rendering various resume templates on to the screen and the user can select either of them and proceed further. 
 function Home() {
 
@@ -50,6 +54,9 @@ function Home() {
                                 <li>Some templates are based on previous users success in the field</li>
                             </ul>
                         </div>
+                    </section>
+                    <section id='home-gallery'>
+                        {/* <img className='home-img' src={img2}/> */}
                     </section>
                 </div>
             

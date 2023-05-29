@@ -316,6 +316,13 @@ ul.features-list {
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
 }
+#home-gallery {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.home-img{
+  border-radius: 5px;
+}
 
 /* build nav */
 .build-nav {

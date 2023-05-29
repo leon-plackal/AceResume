@@ -7,7 +7,7 @@ import xbutton from '../Data/images/x-symbol.svg'
 export default function Modal(index) {
   const [modal, setModal] = useState(false);
   const [showAnim, setshowAnim] = useState(false)
-  const eduHeader = document.querySelector(".edu-gtp");
+  let eduHeader = document.querySelector(".edu-gtp");
 
   function addClass(el,name) {
     el.className += ' '+name;
@@ -26,6 +26,7 @@ export default function Modal(index) {
       );
       addClass(eduHeader, 'activeai')
 
+      
     } else{
       removeClass(eduHeader, 'activeai')
     }
