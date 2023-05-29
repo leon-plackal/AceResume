@@ -13,7 +13,8 @@ What I seek to add:
 - Color picker
 - User accounts to save their resumes
 - Export to WordDocx
-
-![Alt text](src/Components/Data/images/home2.jpg "AceResume")
+- 
+<img src="src/Components/Data/images/home2.jpg" width="48">
+<!-- ![Alt text](src/Components/Data/images/home2.jpg "AceResume") -->
 
 This app is yet to be deployed, however it will be soon!
