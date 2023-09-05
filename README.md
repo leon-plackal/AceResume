@@ -1,9 +1,10 @@
 # Ace-Resume
-Build with ReactJS
+Deployed with Vercel at: https://ace-resume.vercel.app/ 🎃
+> Built with ReactJS
 
 Features:
-- Switch between templates
-- Autofilling preview
+- Switch between templates to choose your preferred layout
+- Autofilling preview of your resume
 - Export to PDF
 - Chat GPT Autofill recommendations
 - Tips, word count, writing recommendations
@@ -19,9 +20,9 @@ What I seek to add:
 <img src="src/Components/Data/images/home3.jpg" width="500">
 
 Usage:
-- create .env file in root, obtain your OpenAI API key and add a variable REACT_APP_API_KEY with this key as string value
+- create .env file in root, obtain your OpenAI API key from https://platform.openai.com/account/api-keys and add a variable REACT_APP_API_KEY with this key as string value (Example: REACT_APP_API_KEY = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 - npm install
 - cd src
 - npm start
 
-This app is yet to be deployed, however it will be soon!
+I hope you find this app useful.
