@@ -480,6 +480,7 @@ div.content {
 
 /* templates */
 .template-global {
+  border-radius: 5px;
   height: 29.7cm;
   width: 21cm;
   overflow: hidden;
@@ -489,7 +490,7 @@ div.content {
   height: 100%;
   background-color: #ffffff;
   padding: 2rem;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 
 }
 
@@ -549,12 +550,20 @@ div.content {
   height: 250px;
   margin: 0;
   width: 99%;
-  overflow: scroll;
+
   z-index: 3;
   border: none;
   outline: none;
   transform: translate(3px, 0px);
   font-size: 1rem;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.ProseMirror::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .row {
