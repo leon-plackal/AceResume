@@ -9,16 +9,16 @@ function Template2() {
     const dataStore = useSelector(state => state.dataStore)
     return (
         <div className='template-global' style={{ fontFamily: 'Rubik', fontWeight: '400' }}>
-            <div className=' w-100 position-relative' style={{ height: '15%', overflow:'hidden'}}>
+            <div className=' w-100 position-relative' style={{ height: '15%', overflow:'hidden', background:'white'}}>
                 <img className="position-absolute" src={dataStore.imageFile} alt=''
-                    style={{ display:'flex', alignItems:'center', width: '100%',height:'auto', padding: 0, zIndex: '-1', opacity: '0.8', translate:'0 -200px' }} />
+                    style={{ display:'flex', alignItems:'center', width: '100%',height:'auto', padding: 0, zIndex: '5', opacity: '0.7', translate:'0 -200px' }} />
                 <div className='d-flex justify-content-between align-items-center gap-3 w-100' style={{padding:'2.8rem'}} >
-                    <div className=' d-flex flex-column ps-4' style={{ textTransform: 'uppercase', fontWeight: '500', fontSize: '30px', }}>
+                    <div className=' d-flex flex-column ps-4' style={{ textTransform: 'uppercase', fontWeight: '500', fontSize: '30px', zIndex: '6'}}>
                         <div style={{ textTransform: 'uppercase', fontWeight: '500', fontSize: '30px', lineHeight:'30px'}}>{dataStore.personalInfo.firstName}</div>
                         <div style={{ textTransform: 'uppercase', fontWeight: '500', fontSize: '30px', lineHeight:'30px'}}>{dataStore.personalInfo.lastName}</div>
                         <div style={{  fontWeight: '400', fontSize: '14px', }}>{dataStore.personalInfo.Role}</div>
                     </div>
-                    <div >
+                    <div style={{ zIndex: '6'}}>
                         <div style={{ fontWeight: '400', fontSize: "12px", wordBreak: 'break-all' }}>{dataStore.personalInfo.City}</div>
                         <div style={{ fontWeight: '400', fontSize: "12px", wordBreak: 'break-all' }}>{dataStore.personalInfo.Mobile}</div>
                         <div style={{ fontWeight: '400', fontSize: "12px", wordBreak: 'break-all' }}>{dataStore.personalInfo.Email}</div>

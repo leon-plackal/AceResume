@@ -51,7 +51,6 @@ textarea {
 .modal-content {
     position: absolute;
     background: #f0f0f0;
-    border-radius: 3px;
     width: 100%;
     height: 100%;
     z-index: 10;
