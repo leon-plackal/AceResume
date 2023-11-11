@@ -2,7 +2,6 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import TextField from '../InputComponents/TextField'
 import { updateEducation, addArrayElement, removeArrayElement, updateErrorMessages } from '../../ReduxManager/dataStoreSlice'
-import TextArea from '../InputComponents/TextArea'
 import GTPEducationPopup from '../GPT/educationModal'
 import TiptapEducation from '../InputComponents/TiptapEducation'
 

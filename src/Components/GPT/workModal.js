@@ -61,7 +61,7 @@ export default function Modal(index) {
           index={index}
           />
             <button className="close-modal" onClick={toggleModal}>
-              <img src={xbutton}/>
+              <img src={xbutton} alt={"close"}/>
             </button>
           </div>
         </div>

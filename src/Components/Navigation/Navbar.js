@@ -8,7 +8,7 @@ function NavBar() {
         <div className='build-nav'>
 
             <div className='nav-left'>
-                <img src={acelogo}/>
+                <img src={acelogo} alt={"logo"}/>
             </div>
 
             <div className='nav-right'>

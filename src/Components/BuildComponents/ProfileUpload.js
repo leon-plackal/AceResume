@@ -28,7 +28,7 @@ function App() {
         <div className="profile-picture">
     
             <div className="row">
-                <img src={imageFile} alt='Image'/>
+                <img src={imageFile} alt='Profile'/>
             </div>
             <div className="pfp-link">
                 <input type="file" onChange={handleChange} title="hi" />
