@@ -1,5 +1,5 @@
 # Ace-Resume
-Deployed with Vercel at: https://ace-resume.vercel.app/ 🎃
+
 > Built with ReactJS
 
 Features:
